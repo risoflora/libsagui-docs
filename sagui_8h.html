@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Sagui library
-   &#160;<span id="projectnumber">v1.0.2</span>
+   &#160;<span id="projectnumber">v1.1.0</span>
    </div>
    <div id="projectbrief">–– an ideal C library to develop cross-platform HTTP servers.</div>
   </td>
@@ -113,6 +113,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a05b92ec408039700f4786871eac486df"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sagui_8h.html#a05b92ec408039700f4786871eac486df">SG_ERR_SIZE</a>&#160;&#160;&#160;256</td></tr>
+<tr class="separator:a05b92ec408039700f4786871eac486df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae64c67ed9caee0189cf4fd669a869255"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gae64c67ed9caee0189cf4fd669a869255">sg_httpres_send</a>(res,  val,  content_type,  status)&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#ga0017d599cc14fd21682c01d20ffedf8c">sg_httpres_sendbinary</a>((res), (void *) (val), ((val != NULL) ? strlen((val)) : 0), (content_type), (status))</td></tr>
 <tr class="separator:gae64c67ed9caee0189cf4fd669a869255"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -155,8 +157,8 @@ Functions</h2></td></tr>
 <tr class="separator:gab75ee584c99b78bd2971e85cb7ccce85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae01910b94d1aa7d1a6fe44feaa3f111a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#gae01910b94d1aa7d1a6fe44feaa3f111a">sg_free</a> (void *ptr)</td></tr>
 <tr class="separator:gae01910b94d1aa7d1a6fe44feaa3f111a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga71174c3c5dbafe4ef40a5e0485972348"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#ga71174c3c5dbafe4ef40a5e0485972348">sg_strerror</a> (int errnum, char *str, size_t len)</td></tr>
-<tr class="separator:ga71174c3c5dbafe4ef40a5e0485972348"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9e97bf43a8b4fc583191d37b0faa633e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#ga9e97bf43a8b4fc583191d37b0faa633e">sg_strerror</a> (int errnum, char *errmsg, size_t errlen)</td></tr>
+<tr class="separator:ga9e97bf43a8b4fc583191d37b0faa633e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4e4b1adf77a316ebae033459f7bdb286"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#ga4e4b1adf77a316ebae033459f7bdb286">sg_is_post</a> (const char *method)</td></tr>
 <tr class="separator:ga4e4b1adf77a316ebae033459f7bdb286"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8d2de390bcc7bad03fed29922eb565b3"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#ga8d2de390bcc7bad03fed29922eb565b3">sg_tmpdir</a> (void)</td></tr>
@@ -257,6 +259,8 @@ Functions</h2></td></tr>
 <tr class="separator:ga7a8cb69e38d3462dc44bf6717291e82b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacb8f9d02de43f508e1cd714d9b44bf7e"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsg__httpupld.html">sg_httpupld</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gacb8f9d02de43f508e1cd714d9b44bf7e">sg_httpreq_uploads</a> (struct <a class="el" href="structsg__httpreq.html">sg_httpreq</a> *req)</td></tr>
 <tr class="separator:gacb8f9d02de43f508e1cd714d9b44bf7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaacbbc0c18e2b3b8043b443f2bee02860"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gaacbbc0c18e2b3b8043b443f2bee02860">sg_httpreq_tls_session</a> (struct <a class="el" href="structsg__httpreq.html">sg_httpreq</a> *req)</td></tr>
+<tr class="separator:gaacbbc0c18e2b3b8043b443f2bee02860"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga51e5ce38aa517255440cc36f4165af6a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga51e5ce38aa517255440cc36f4165af6a">sg_httpreq_set_user_data</a> (struct <a class="el" href="structsg__httpreq.html">sg_httpreq</a> *req, void *data)</td></tr>
 <tr class="separator:ga51e5ce38aa517255440cc36f4165af6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0fde93ada6f83f34c9228149ffd91381"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga0fde93ada6f83f34c9228149ffd91381">sg_httpreq_user_data</a> (struct <a class="el" href="structsg__httpreq.html">sg_httpreq</a> *req)</td></tr>
@@ -271,12 +275,18 @@ Functions</h2></td></tr>
 <tr class="separator:gaf8c0562106bffb91504f15554179a347"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga053cf9631b13433e488f65824ca6c22e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga053cf9631b13433e488f65824ca6c22e">sg_httpres_sendstream</a> (struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *res, uint64_t size, size_t block_size, <a class="el" href="group__sg__utils.html#ga38b5fcdae52a6ae333bdda7b24dabd79">sg_read_cb</a> read_cb, void *handle, <a class="el" href="group__sg__utils.html#ga9dcbe0dd618af35cc57ea89ba1bf6ae7">sg_free_cb</a> free_cb, unsigned int status)</td></tr>
 <tr class="separator:ga053cf9631b13433e488f65824ca6c22e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga761b37fcc1c1aeb0bd3043935f61ec9f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga761b37fcc1c1aeb0bd3043935f61ec9f">sg_httpres_clear</a> (struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *res)</td></tr>
+<tr class="separator:ga761b37fcc1c1aeb0bd3043935f61ec9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga287d2c4bea3ac0377f7784325ed460c8"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga287d2c4bea3ac0377f7784325ed460c8">sg_httpsrv_new2</a> (<a class="el" href="group__sg__httpsrv.html#ga0f194f2d19e0a893a233aac05c5f3267">sg_httpauth_cb</a> auth_cb, void *auth_cls, <a class="el" href="group__sg__httpsrv.html#gaaca87e1ea0ab0b2911f1fb5ddefee7af">sg_httpreq_cb</a> req_cb, void *req_cls, <a class="el" href="group__sg__utils.html#gacf4b1e969cdaedde53d5fe5b7341d902">sg_err_cb</a> err_cb, void *err_cls) __attribute__((malloc))</td></tr>
 <tr class="separator:ga287d2c4bea3ac0377f7784325ed460c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga56a6469371909b36270f0e877fbc69a8"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga56a6469371909b36270f0e877fbc69a8">sg_httpsrv_new</a> (<a class="el" href="group__sg__httpsrv.html#gaaca87e1ea0ab0b2911f1fb5ddefee7af">sg_httpreq_cb</a> cb, void *cls) __attribute__((malloc))</td></tr>
 <tr class="separator:ga56a6469371909b36270f0e877fbc69a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac377679c831c0b428ee80b2f63174bf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gac377679c831c0b428ee80b2f63174bf8">sg_httpsrv_free</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv)</td></tr>
 <tr class="separator:gac377679c831c0b428ee80b2f63174bf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1edeaed3fccc4edf0fee5a0b71aa6e45"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga1edeaed3fccc4edf0fee5a0b71aa6e45">sg_httpsrv_tls_listen2</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv, const char *key, const char *pwd, const char *cert, const char *trust, const char *dhparams, uint16_t port, bool threaded)</td></tr>
+<tr class="separator:ga1edeaed3fccc4edf0fee5a0b71aa6e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8b31dc74e058ab7f821797f64d9bbdc7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga8b31dc74e058ab7f821797f64d9bbdc7">sg_httpsrv_tls_listen</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv, const char *key, const char *cert, uint16_t port, bool threaded)</td></tr>
+<tr class="separator:ga8b31dc74e058ab7f821797f64d9bbdc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafa768c07cdd78f78c14a5daaafd4c20a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gafa768c07cdd78f78c14a5daaafd4c20a">sg_httpsrv_listen</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv, uint16_t port, bool threaded)</td></tr>
 <tr class="separator:gafa768c07cdd78f78c14a5daaafd4c20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga751752009ac77cc76c84fe216a1c76f2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga751752009ac77cc76c84fe216a1c76f2">sg_httpsrv_shutdown</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv)</td></tr>
@@ -318,10 +328,25 @@ Functions</h2></td></tr>
 <tr class="memitem:gabe1c665201114bedfe2767e3f304b0cb"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gabe1c665201114bedfe2767e3f304b0cb">sg_httpread_end</a> (bool err)</td></tr>
 <tr class="separator:gabe1c665201114bedfe2767e3f304b0cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a05b92ec408039700f4786871eac486df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05b92ec408039700f4786871eac486df">&#9670;&nbsp;</a></span>SG_ERR_SIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SG_ERR_SIZE&#160;&#160;&#160;256</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 22 2018 13:58:43 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Sep 18 2018 11:43:18 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

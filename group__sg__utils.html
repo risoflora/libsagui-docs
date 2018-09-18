@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Sagui library
-   &#160;<span id="projectnumber">v1.0.2</span>
+   &#160;<span id="projectnumber">v1.1.0</span>
    </div>
    <div id="projectbrief">–– an ideal C library to develop cross-platform HTTP servers.</div>
   </td>
@@ -118,8 +118,8 @@ Functions</h2></td></tr>
 <tr class="separator:gab75ee584c99b78bd2971e85cb7ccce85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae01910b94d1aa7d1a6fe44feaa3f111a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#gae01910b94d1aa7d1a6fe44feaa3f111a">sg_free</a> (void *ptr)</td></tr>
 <tr class="separator:gae01910b94d1aa7d1a6fe44feaa3f111a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga71174c3c5dbafe4ef40a5e0485972348"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#ga71174c3c5dbafe4ef40a5e0485972348">sg_strerror</a> (int errnum, char *str, size_t len)</td></tr>
-<tr class="separator:ga71174c3c5dbafe4ef40a5e0485972348"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9e97bf43a8b4fc583191d37b0faa633e"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#ga9e97bf43a8b4fc583191d37b0faa633e">sg_strerror</a> (int errnum, char *errmsg, size_t errlen)</td></tr>
+<tr class="separator:ga9e97bf43a8b4fc583191d37b0faa633e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4e4b1adf77a316ebae033459f7bdb286"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#ga4e4b1adf77a316ebae033459f7bdb286">sg_is_post</a> (const char *method)</td></tr>
 <tr class="separator:ga4e4b1adf77a316ebae033459f7bdb286"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8d2de390bcc7bad03fed29922eb565b3"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#ga8d2de390bcc7bad03fed29922eb565b3">sg_tmpdir</a> (void)</td></tr>
@@ -341,7 +341,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a3">example_httpsrv_tls_cert_auth.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a4">example_httpsrv_tls_cert_auth.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -403,12 +403,12 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a5">example_httpsrv_tls_cert_auth.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a6">example_httpsrv_tls_cert_auth.c</a>.</dd>
 </dl>
 </div>
 </div>
-<a id="ga71174c3c5dbafe4ef40a5e0485972348"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga71174c3c5dbafe4ef40a5e0485972348">&#9670;&nbsp;</a></span>sg_strerror()</h2>
+<a id="ga9e97bf43a8b4fc583191d37b0faa633e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9e97bf43a8b4fc583191d37b0faa633e">&#9670;&nbsp;</a></span>sg_strerror()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -423,13 +423,13 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>str</em>, </td>
+          <td class="paramname"><em>errmsg</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>len</em>&#160;</td>
+          <td class="paramname"><em>errlen</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -441,8 +441,8 @@ Functions</h2></td></tr>
 <p class="">Returns string describing an error number. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">errnum</td><td>Error number. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>Pointer of a string to store the error message. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>Length of the error message. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">errmsg</td><td>Pointer of a string to store the error message. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">errlen</td><td>Length of the error message. </td></tr>
   </table>
   </dd>
 </dl>
@@ -505,7 +505,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 22 2018 13:58:43 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Sep 18 2018 11:43:18 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

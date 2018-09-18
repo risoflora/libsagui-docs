@@ -5,7 +5,8 @@ var indexSectionsWithContent =
   2: "es",
   3: "s",
   4: "s",
-  5: "ahsu"
+  5: "s",
+  6: "ahsu"
 };
 
 var indexSectionNames =
@@ -15,7 +16,8 @@ var indexSectionNames =
   2: "files",
   3: "functions",
   4: "typedefs",
-  5: "groups"
+  5: "defines",
+  6: "groups"
 };
 
 var indexSectionLabels =
@@ -25,6 +27,7 @@ var indexSectionLabels =
   2: "Files",
   3: "Functions",
   4: "Typedefs",
-  5: "Modules"
+  5: "Macros",
+  6: "Modules"
 };
 
