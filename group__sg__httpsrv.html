@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Sagui library
-   &#160;<span id="projectnumber">v1.1.0</span>
+   &#160;<span id="projectnumber">v1.2.0</span>
    </div>
    <div id="projectbrief">–– an ideal C library to develop cross-platform HTTP servers.</div>
   </td>
@@ -307,7 +307,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>It exits the application if called when no memory space is available. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpauth_8c-example.html#a7">example_httpauth.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a5">example_httpcookie.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a2">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_tls_8c-example.html#a2">example_httpsrv_tls.c</a>, <a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a5">example_httpsrv_tls_cert_auth.c</a>, and <a class="el" href="example_httpuplds_8c-example.html#a13">example_httpuplds.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpauth_8c-example.html#a7">example_httpauth.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a5">example_httpcookie.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a2">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a2">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpsrv_tls_8c-example.html#a2">example_httpsrv_tls.c</a>, <a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a5">example_httpsrv_tls_cert_auth.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a13">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a4">example_router_srv.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -495,7 +495,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Realm as null-terminated string. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <code>auth</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">auth</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -608,7 +608,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>User as null-terminated string. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <code>auth</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">auth</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -640,7 +640,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Password as null-terminated string. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <code>auth</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">auth</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -679,7 +679,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Iterates over all the upload items in the <code>uplds</code> list. </p><dl class="params"><dt>Parameters</dt><dd>
+<p class="">Iterates over all the upload items in the <b><code class="paramname">uplds</code></b> list. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">uplds</td><td>Uploads list handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">cb</td><td>Callback to iterate over upload items. </td></tr>
@@ -713,7 +713,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Gets the next upload item starting from the first item pointer <code>upld</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p class="">Gets the next upload item starting from the first item pointer <b><code class="paramname">upld</code></b>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">upld</td><td>Next upload item starting from the first item pointer. </td></tr>
   </table>
@@ -745,7 +745,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Counts the total upload items in the list <code>uplds</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p class="">Counts the total upload items in the list <b><code class="paramname">uplds</code></b>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">uplds</td><td>Uploads list. </td></tr>
   </table>
@@ -776,7 +776,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Returns the stream handle of the upload handle <code>upld</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p class="">Returns the stream handle of the upload handle <b><code class="paramname">upld</code></b>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">upld</td><td>Upload handle. </td></tr>
   </table>
@@ -785,7 +785,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Stream handle. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <code>upld</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">upld</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -807,7 +807,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Returns the directory of the upload handle <code>upld</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p class="">Returns the directory of the upload handle <b><code class="paramname">upld</code></b>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">upld</td><td>Upload handle. </td></tr>
   </table>
@@ -816,7 +816,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Upload directory as null-terminated string. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <code>upld</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">upld</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -838,7 +838,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Returns the field of the upload handle <code>upld</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p class="">Returns the field of the upload handle <b><code class="paramname">upld</code></b>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">upld</td><td>Upload handle. </td></tr>
   </table>
@@ -847,7 +847,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Upload field as null-terminated string. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <code>upld</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">upld</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -869,7 +869,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Returns the name of the upload handle <code>upld</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p class="">Returns the name of the upload handle <b><code class="paramname">upld</code></b>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">upld</td><td>Upload handle. </td></tr>
   </table>
@@ -878,7 +878,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Upload name as null-terminated string. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <code>upld</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">upld</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -910,7 +910,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Upload MIME as null-terminated string. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <code>upld</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">upld</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -941,7 +941,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Upload encoding as null-terminated string. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <code>upld</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">upld</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -969,7 +969,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Upload size into <code>uint64</code>. If <code>upld</code> is null, sets the <code>errno</code> to <code>EINVAL</code>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Upload size into <code>uint64</code>. If <b><code class="paramname">upld</code></b> is null, sets the <code>errno</code> to <code>EINVAL</code>. </dd></dl>
 
 </div>
 </div>
@@ -1009,7 +1009,7 @@ Functions</h2></td></tr>
   <table class="retval">
     <tr><td class="paramname">0</td><td>- Success. </td></tr>
     <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
-    <tr><td class="paramname">EEXIST</td><td>- File already exists (if <code>overwritten</code> is <code>false</code>). </td></tr>
+    <tr><td class="paramname">EEXIST</td><td>- File already exists (if <b><code class="paramname">overwritten</code></b> is <code>false</code>). </td></tr>
     <tr><td class="paramname">EISDIR</td><td>- Destination file is a directory. </td></tr>
   </table>
   </dd>
@@ -1061,7 +1061,7 @@ Functions</h2></td></tr>
   <table class="retval">
     <tr><td class="paramname">0</td><td>- Success. </td></tr>
     <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
-    <tr><td class="paramname">EEXIST</td><td>- File already exists (if <code>overwritten</code> is <code>true</code>). </td></tr>
+    <tr><td class="paramname">EEXIST</td><td>- File already exists (if <b><code class="paramname">overwritten</code></b> is <code>true</code>). </td></tr>
     <tr><td class="paramname">EISDIR</td><td>- Destination file is a directory. </td></tr>
   </table>
   </dd>
@@ -1093,7 +1093,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Reference to the client headers map. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <code>req</code> is null and sets the <code>errno</code> to <code>EINVAL</code> </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">req</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code> </td></tr>
   </table>
   </dd>
 </dl>
@@ -1125,7 +1125,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Reference to the client cookies map. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <code>req</code> is null and sets the <code>errno</code> to <code>EINVAL</code> </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">req</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code> </td></tr>
   </table>
   </dd>
 </dl>
@@ -1158,7 +1158,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Reference to the query-string map. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <code>req</code> is null and sets the <code>errno</code> to <code>EINVAL</code> </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">req</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code> </td></tr>
   </table>
   </dd>
 </dl>
@@ -1191,7 +1191,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Reference to the form fields map. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <code>req</code> is null and sets the <code>errno</code> to <code>EINVAL</code> </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">req</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code> </td></tr>
   </table>
   </dd>
 </dl>
@@ -1223,7 +1223,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>HTTP version as null-terminated string. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <code>req</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">req</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1254,7 +1254,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>HTTP method as null-terminated string. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <code>req</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">req</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1285,11 +1285,11 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Path component as null-terminated string. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <code>req</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">req</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpcookie_8c-example.html#a4">example_httpcookie.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpcookie_8c-example.html#a4">example_httpcookie.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a13">example_router_srv.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1317,7 +1317,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Instance of the payload. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <code>req</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">req</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1346,7 +1346,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the client is uploading data, <code>false</code> otherwise. If <code>req</code> is null, sets the <code>errno</code> to <code>EINVAL</code>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the client is uploading data, <code>false</code> otherwise. If <b><code class="paramname">req</code></b> is null, sets the <code>errno</code> to <code>EINVAL</code>. </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpuplds_8c-example.html#a16">example_httpuplds.c</a>.</dd>
 </dl>
 </div>
@@ -1375,7 +1375,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>List of the uploaded files. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <code>req</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">req</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1482,7 +1482,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>User data pointer. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <code>req</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">req</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1513,7 +1513,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Reference to the server headers map. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <code>res</code> is null and sets the <code>errno</code> to <code>EINVAL</code> </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">res</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code> </td></tr>
   </table>
   </dd>
 </dl>
@@ -1876,18 +1876,18 @@ Functions</h2></td></tr>
 <p class="">Creates a new HTTP server handle. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">auth_cb</td><td>Callback to grant/deny user access to the server resources. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">auth_cls</td><td>User-defined closure for <code>auth_cb</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">auth_cls</td><td>User-defined closure for <b><code class="paramname">auth_cb</code></b>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">req_cb</td><td>Callback to handle requests and responses. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">req_cls</td><td>User-defined closure for <code>req_cb</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">req_cls</td><td>User-defined closure for <b><code class="paramname">req_cb</code></b>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">err_cb</td><td>Callback to handle server errors. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">err_cls</td><td>User-defined closure for <code>err_cb</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">err_cls</td><td>User-defined closure for <b><code class="paramname">err_cb</code></b>. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>New HTTP server handle. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If the <code>req_cb</code> or <code>err_cb</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If the <b><code class="paramname">req_cb</code></b> or <b><code class="paramname">err_cb</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1930,11 +1930,11 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>New HTTP server handle. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If the <code>cb</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If the <b><code class="paramname">cb</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpcookie_8c-example.html#a9">example_httpcookie.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a4">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_tls_8c-example.html#a4">example_httpsrv_tls.c</a>, <a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a8">example_httpsrv_tls_cert_auth.c</a>, and <a class="el" href="example_httpuplds_8c-example.html#a22">example_httpuplds.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpcookie_8c-example.html#a9">example_httpcookie.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a4">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a4">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpsrv_tls_8c-example.html#a4">example_httpsrv_tls.c</a>, <a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a8">example_httpsrv_tls_cert_auth.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a22">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a17">example_router_srv.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1960,7 +1960,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>If the server is running it stops before being freed. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpauth_8c-example.html#a11">example_httpauth.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a11">example_httpcookie.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a6">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_tls_8c-example.html#a6">example_httpsrv_tls.c</a>, <a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a11">example_httpsrv_tls_cert_auth.c</a>, and <a class="el" href="example_httpuplds_8c-example.html#a24">example_httpuplds.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpauth_8c-example.html#a11">example_httpauth.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a11">example_httpcookie.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a6">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a8">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpsrv_tls_8c-example.html#a6">example_httpsrv_tls.c</a>, <a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a11">example_httpsrv_tls_cert_auth.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a24">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a19">example_router_srv.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -2038,7 +2038,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the server is started, <code>false</code> otherwise. If <code>srv</code> is null, sets the <code>errno</code> to <code>EINVAL</code>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the server is started, <code>false</code> otherwise. If <b><code class="paramname">srv</code></b> is null, sets the <code>errno</code> to <code>EINVAL</code>. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>If port is <code>0</code>, the operating system will assign an unused port randomly. </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a9">example_httpsrv_tls_cert_auth.c</a>.</dd>
 </dl>
@@ -2097,7 +2097,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the server is started, <code>false</code> otherwise. If <code>srv</code> is null, sets the <code>errno</code> to <code>EINVAL</code>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the server is started, <code>false</code> otherwise. If <b><code class="paramname">srv</code></b> is null, sets the <code>errno</code> to <code>EINVAL</code>. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>If port is <code>0</code>, the operating system will assign an unused port randomly. </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpsrv_tls_8c-example.html#a5">example_httpsrv_tls.c</a>.</dd>
 </dl>
@@ -2142,9 +2142,9 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the server is started, <code>false</code> otherwise. If <code>srv</code> is null, sets the <code>errno</code> to <code>EINVAL</code>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the server is started, <code>false</code> otherwise. If <b><code class="paramname">srv</code></b> is null, sets the <code>errno</code> to <code>EINVAL</code>. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>If port is <code>0</code>, the operating system will assign randomly an unused port. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpauth_8c-example.html#a10">example_httpauth.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a10">example_httpcookie.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a5">example_httpsrv.c</a>, and <a class="el" href="example_httpuplds_8c-example.html#a23">example_httpuplds.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpauth_8c-example.html#a10">example_httpauth.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a10">example_httpcookie.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a5">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a7">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a23">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a18">example_router_srv.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -2169,7 +2169,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>0</code> if the server is stopped. If <code>srv</code> is null, sets the <code>errno</code> to <code>EINVAL</code>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>0</code> if the server is stopped. If <b><code class="paramname">srv</code></b> is null, sets the <code>errno</code> to <code>EINVAL</code>. </dd></dl>
 
 </div>
 </div>
@@ -2194,8 +2194,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Server listening port, <code>0</code> otherwise. If <code>srv</code> is null, sets the <code>errno</code> to <code>EINVAL</code>. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpauth_8c-example.html#a12">example_httpauth.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a12">example_httpcookie.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a7">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_tls_8c-example.html#a7">example_httpsrv_tls.c</a>, <a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a10">example_httpsrv_tls_cert_auth.c</a>, and <a class="el" href="example_httpuplds_8c-example.html#a25">example_httpuplds.c</a>.</dd>
+<dl class="section return"><dt>Returns</dt><dd>Server listening port, <code>0</code> otherwise. If <b><code class="paramname">srv</code></b> is null, sets the <code>errno</code> to <code>EINVAL</code>. </dd></dl>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpauth_8c-example.html#a12">example_httpauth.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a12">example_httpcookie.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a7">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a9">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpsrv_tls_8c-example.html#a7">example_httpsrv_tls.c</a>, <a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a10">example_httpsrv_tls_cert_auth.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a25">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a20">example_router_srv.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -2220,7 +2220,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the server is in threaded model, <code>false</code> otherwise. If <code>srv</code> is null, sets the <code>errno</code> to <code>EINVAL</code>. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the server is in threaded model, <code>false</code> otherwise. If <b><code class="paramname">srv</code></b> is null, sets the <code>errno</code> to <code>EINVAL</code>. </dd></dl>
 
 </div>
 </div>
@@ -2367,7 +2367,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Directory as null-terminated string. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If the <code>srv</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If the <b><code class="paramname">srv</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2440,7 +2440,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Post buffering size. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>If the <code>srv</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">0</td><td>If the <b><code class="paramname">srv</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2513,7 +2513,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Payload total limit. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>If the <code>srv</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">0</td><td>If the <b><code class="paramname">srv</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2586,7 +2586,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Uploads total limit. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>If the <code>srv</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">0</td><td>If the <b><code class="paramname">srv</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2632,7 +2632,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpsrv_benchmark_8c-example.html#a5">example_httpsrv_benchmark.c</a>.</dd>
+</dl>
 </div>
 </div>
 <a id="gaf876b536d2ad531b83a98ef9875b823c"></a>
@@ -2659,7 +2660,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Thread pool size. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>If the <code>srv</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">0</td><td>If the <b><code class="paramname">srv</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2732,7 +2733,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Timeout (in seconds). </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>If the <code>srv</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">0</td><td>If the <b><code class="paramname">srv</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2778,7 +2779,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpsrv_benchmark_8c-example.html#a6">example_httpsrv_benchmark.c</a>.</dd>
+</dl>
 </div>
 </div>
 <a id="ga66dd01824d5648a7c487e35e5169a877"></a>
@@ -2805,7 +2807,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Concurrent connections limit. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>If the <code>srv</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">0</td><td>If the <b><code class="paramname">srv</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2840,7 +2842,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 18 2018 11:43:18 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 1 2018 09:29:04 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

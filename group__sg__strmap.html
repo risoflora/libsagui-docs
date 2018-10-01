@@ -27,7 +27,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Sagui library
-   &#160;<span id="projectnumber">v1.1.0</span>
+   &#160;<span id="projectnumber">v1.2.0</span>
    </div>
    <div id="projectbrief">–– an ideal C library to develop cross-platform HTTP servers.</div>
   </td>
@@ -152,6 +152,13 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>- Success. </td></tr>
+    <tr><td class="paramname">E&lt;ERROR&gt;</td><td>- User-defined error to stop pairs iteration. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -174,6 +181,14 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">-1</td><td>- A &lt; B. </td></tr>
+    <tr><td class="paramname">0</td><td>- A == B. </td></tr>
+    <tr><td class="paramname">1</td><td>- A &gt; B. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -193,7 +208,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Returns a name from the <code>pair</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p class="">Returns a name from the <b><code class="paramname">pair</code></b>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pair</td><td>Pair of name-value. </td></tr>
   </table>
@@ -202,7 +217,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Name as null-terminated string. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If the <code>pair</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If the <b><code class="paramname">pair</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -225,7 +240,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Returns a value from the <code>pair</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p class="">Returns a value from the <b><code class="paramname">pair</code></b>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">pair</td><td>Pair of name-value. </td></tr>
   </table>
@@ -234,7 +249,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Value as null-terminated string. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If the <code>pair</code> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If the <b><code class="paramname">pair</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -273,7 +288,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Adds a pair of name-value to the string <code>map</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p class="">Adds a pair of name-value to the string <b><code class="paramname">map</code></b>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">map</td><td>Pairs map pointer to add a new pair. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pair name. </td></tr>
@@ -288,7 +303,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>It cannot check if a name already exists in a pair added to the <code>map</code>, then the uniqueness must be managed by the application. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>It cannot check if a name already exists in a pair added to the <b><code class="paramname">map</code></b>, then the uniqueness must be managed by the application. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>It exits the application if called when no memory space is available. </dd></dl>
 
 </div>
@@ -324,7 +339,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Sets a pair of name-value to the string <code>map</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p class="">Sets a pair of name-value to the string <b><code class="paramname">map</code></b>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">map</td><td>Pairs map pointer to set a new pair. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Pair name. </td></tr>
@@ -339,7 +354,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>If a name already exists in a pair previously added into the <code>map</code>, then the function replaces its value, otherwise it is added as a new pair. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>If a name already exists in a pair previously added into the <b><code class="paramname">map</code></b>, then the function replaces its value, otherwise it is added as a new pair. </dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>It exits the application if called when no memory space is available. </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_strmap_8c-example.html#a3">example_strmap.c</a>.</dd>
 </dl>
@@ -380,7 +395,7 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">map</td><td>Pairs map. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>Name to find the pair. </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">pair</td><td>Pointer to store the found pair. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">pair</td><td>Pointer of the variable to store the found pair. </td></tr>
   </table>
   </dd>
 </dl>
@@ -428,10 +443,10 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Pair value. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pair value as null-terminated string. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <code>map</code> or <code>name</code> is null or pair is not found. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">map</code></b> or <b><code class="paramname">name</code></b> is null or pair is not found. </td></tr>
   </table>
   </dd>
 </dl>
@@ -662,7 +677,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p class="">Cleans the entire map. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">map</td><td>Pointer to the pairs map. </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">map</td><td>Pointer to the pairs map. </td></tr>
   </table>
   </dd>
 </dl>
@@ -673,7 +688,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 18 2018 11:43:18 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 1 2018 09:29:04 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>
