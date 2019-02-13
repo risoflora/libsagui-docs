@@ -18,6 +18,7 @@
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="sagui.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Sagui library
-   &#160;<span id="projectnumber">v1.2.0</span>
+   &#160;<span id="projectnumber">v2.0.0</span>
    </div>
-   <div id="projectbrief">–– an ideal C library to develop cross-platform HTTP servers.</div>
+   <div id="projectbrief">Cross-platform library which helps to develop web servers or frameworks.</div>
   </td>
  </tr>
  </tbody>
@@ -95,8 +96,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Typedefs</h2></td></tr>
 <tr class="memitem:gacf4b1e969cdaedde53d5fe5b7341d902"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#gacf4b1e969cdaedde53d5fe5b7341d902">sg_err_cb</a>) (void *cls, const char *err)</td></tr>
 <tr class="separator:gacf4b1e969cdaedde53d5fe5b7341d902"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf0ee0cb8f53795abb8f051eed9c6e51a"><td class="memItemLeft" align="right" valign="top">typedef size_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#gaf0ee0cb8f53795abb8f051eed9c6e51a">sg_write_cb</a>) (void *handle, uint64_t offset, const char *buf, size_t size)</td></tr>
-<tr class="separator:gaf0ee0cb8f53795abb8f051eed9c6e51a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad3fa3639d86e65c76f0172749d928a9c"><td class="memItemLeft" align="right" valign="top">typedef ssize_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#gad3fa3639d86e65c76f0172749d928a9c">sg_write_cb</a>) (void *handle, uint64_t offset, const char *buf, size_t size)</td></tr>
+<tr class="separator:gad3fa3639d86e65c76f0172749d928a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga38b5fcdae52a6ae333bdda7b24dabd79"><td class="memItemLeft" align="right" valign="top">typedef ssize_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#ga38b5fcdae52a6ae333bdda7b24dabd79">sg_read_cb</a>) (void *handle, uint64_t offset, char *buf, size_t size)</td></tr>
 <tr class="separator:ga38b5fcdae52a6ae333bdda7b24dabd79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9dcbe0dd618af35cc57ea89ba1bf6ae7"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#ga9dcbe0dd618af35cc57ea89ba1bf6ae7">sg_free_cb</a>) (void *handle)</td></tr>
@@ -112,6 +113,8 @@ Functions</h2></td></tr>
 <tr class="separator:ga455f7e7b901e0c7201d037eb4f115327"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad37a5356732928b8ae4d41b29c7c1737"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#gad37a5356732928b8ae4d41b29c7c1737">sg_version_str</a> (void)</td></tr>
 <tr class="separator:gad37a5356732928b8ae4d41b29c7c1737"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab0f09ab80ec44384b54ef2d9945c4e99"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#gab0f09ab80ec44384b54ef2d9945c4e99">sg_malloc</a> (size_t size) __attribute__((malloc))</td></tr>
+<tr class="separator:gab0f09ab80ec44384b54ef2d9945c4e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga923b9064c79330aae4e6ae7ca27e8abd"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#ga923b9064c79330aae4e6ae7ca27e8abd">sg_alloc</a> (size_t size) __attribute__((malloc))</td></tr>
 <tr class="separator:ga923b9064c79330aae4e6ae7ca27e8abd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab75ee584c99b78bd2971e85cb7ccce85"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#gab75ee584c99b78bd2971e85cb7ccce85">sg_realloc</a> (void *ptr, size_t size) __attribute__((malloc))</td></tr>
@@ -126,6 +129,8 @@ Functions</h2></td></tr>
 <tr class="separator:ga8d9ebccbbad91636a101c2fcd55430b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8d2de390bcc7bad03fed29922eb565b3"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#ga8d2de390bcc7bad03fed29922eb565b3">sg_tmpdir</a> (void)</td></tr>
 <tr class="separator:ga8d2de390bcc7bad03fed29922eb565b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0ba94e47ecb156d243aac0025a501025"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#ga0ba94e47ecb156d243aac0025a501025">sg_eor</a> (bool err)</td></tr>
+<tr class="separator:ga0ba94e47ecb156d243aac0025a501025"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p class="">All utility functions of the library. </p>
@@ -151,14 +156,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gaf0ee0cb8f53795abb8f051eed9c6e51a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf0ee0cb8f53795abb8f051eed9c6e51a">&#9670;&nbsp;</a></span>sg_write_cb</h2>
+<a id="gad3fa3639d86e65c76f0172749d928a9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad3fa3639d86e65c76f0172749d928a9c">&#9670;&nbsp;</a></span>sg_write_cb</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef size_t(* sg_write_cb) (void *handle, uint64_t offset, const char *buf, size_t size)</td>
+          <td class="memname">typedef ssize_t(* sg_write_cb) (void *handle, uint64_t offset, const char *buf, size_t size)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -239,8 +244,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">E&lt;ERROR&gt;</td><td>- User-defined error to abort the saving. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">E&lt;ERROR&gt;</td><td>User-defined error to abort the saving. </td></tr>
   </table>
   </dd>
 </dl>
@@ -268,8 +273,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">E&lt;ERROR&gt;</td><td>- User-defined error to abort the saving. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">E&lt;ERROR&gt;</td><td>User-defined error to abort the saving. </td></tr>
   </table>
   </dd>
 </dl>
@@ -311,7 +316,38 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Returns the library version number as string. </p><dl class="section return"><dt>Returns</dt><dd>Library version packed into a null-terminated string. </dd></dl>
+<p class="">Returns the library version number as string in the format N.N.N. </p><dl class="section return"><dt>Returns</dt><dd>Library version packed into a null-terminated string. </dd></dl>
+
+</div>
+</div>
+<a id="gab0f09ab80ec44384b54ef2d9945c4e99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab0f09ab80ec44384b54ef2d9945c4e99">&#9670;&nbsp;</a></span>sg_malloc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* sg_malloc </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="">Allocates a new memory space. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Memory size to be allocated. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer of the allocated memory. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">NULL</td><td>If size is <code>0</code> or no memory space. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -474,7 +510,12 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if <b><code class="paramname">method</code></b> is <code>POST</code>, <code>PUT</code>, <code>DELETE</code> or <code>OPTIONS</code>. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>If <b><code class="paramname">method</code></b> is <code>POST</code>, <code>PUT</code>, <code>DELETE</code> or <code>OPTIONS</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -493,6 +534,18 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p class="">Extracts the entry-point of a path or resource. For example, given a path <code>/api1/customer</code>, the part considered as entry-point is <code>/api1</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Entry-point as null-terminated string. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">NULL</td><td>If no memory space is available. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -518,14 +571,40 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section warning"><dt>Warning</dt><dd>The caller must free the returned value. </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpuplds_8c-example.html#a19">example_httpuplds.c</a>.</dd>
 </dl>
+</div>
+</div>
+<a id="ga0ba94e47ecb156d243aac0025a501025"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0ba94e47ecb156d243aac0025a501025">&#9670;&nbsp;</a></span>sg_eor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t sg_eor </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>err</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="">Indicates the end-of-read processed in <a class="el" href="group__sg__httpsrv.html#gae38e335aa49865396adbd3146b064731">sg_httpres_sendstream()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">err</td><td><code>true</code> to return a value indicating a stream reading error. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Value to end a stream reading. </dd></dl>
+
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 1 2018 09:29:04 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 13 2019 18:47:32 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

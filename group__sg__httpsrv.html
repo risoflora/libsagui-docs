@@ -18,6 +18,7 @@
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="sagui.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Sagui library
-   &#160;<span id="projectnumber">v1.2.0</span>
+   &#160;<span id="projectnumber">v2.0.0</span>
    </div>
-   <div id="projectbrief">–– an ideal C library to develop cross-platform HTTP servers.</div>
+   <div id="projectbrief">Cross-platform library which helps to develop web servers or frameworks.</div>
   </td>
  </tr>
  </tbody>
@@ -110,6 +111,12 @@ Data Structures</h2></td></tr>
 Macros</h2></td></tr>
 <tr class="memitem:gae64c67ed9caee0189cf4fd669a869255"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gae64c67ed9caee0189cf4fd669a869255">sg_httpres_send</a>(res,  val,  content_type,  status)&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#ga0017d599cc14fd21682c01d20ffedf8c">sg_httpres_sendbinary</a>((res), (void *) (val), ((val != NULL) ? strlen((val)) : 0), (content_type), (status))</td></tr>
 <tr class="separator:gae64c67ed9caee0189cf4fd669a869255"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga06ece83b9ccba09faf4a0f94a8ae312f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga06ece83b9ccba09faf4a0f94a8ae312f">sg_httpres_download</a>(res,  filename)&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#gabb7012b6641a23503e8ca806787272d7">sg_httpres_sendfile</a>((res), 0, 0, 0, (filename), false, (200))</td></tr>
+<tr class="separator:ga06ece83b9ccba09faf4a0f94a8ae312f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga056959fd26689cd05f8255b75de30817"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga056959fd26689cd05f8255b75de30817">sg_httpres_render</a>(res,  filename)&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#gabb7012b6641a23503e8ca806787272d7">sg_httpres_sendfile</a>((res), 0, 0, 0, (filename), true, (200))</td></tr>
+<tr class="separator:ga056959fd26689cd05f8255b75de30817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae3596317f8cf6683140d445240b7792c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gae3596317f8cf6683140d445240b7792c">sg_httpres_zsend</a>(res,  val,  content_type,  status)&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#ga9da0e0278135544ce709a242e3f34a52">sg_httpres_zsendbinary</a>((res), (void *) (val), ((val != NULL) ? strlen((val)) : 0), (content_type), (status))</td></tr>
+<tr class="separator:gae3596317f8cf6683140d445240b7792c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -192,14 +199,18 @@ Functions</h2></td></tr>
 <tr class="separator:gac33202e0cb8f5a60cd0b80289bb3dbc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0017d599cc14fd21682c01d20ffedf8c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga0017d599cc14fd21682c01d20ffedf8c">sg_httpres_sendbinary</a> (struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *res, void *buf, size_t size, const char *content_type, unsigned int status)</td></tr>
 <tr class="separator:ga0017d599cc14fd21682c01d20ffedf8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf8c0562106bffb91504f15554179a347"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gaf8c0562106bffb91504f15554179a347">sg_httpres_sendfile</a> (struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *res, size_t block_size, uint64_t max_size, const char *filename, bool rendered, unsigned int status)</td></tr>
-<tr class="separator:gaf8c0562106bffb91504f15554179a347"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga053cf9631b13433e488f65824ca6c22e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga053cf9631b13433e488f65824ca6c22e">sg_httpres_sendstream</a> (struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *res, uint64_t size, size_t block_size, <a class="el" href="group__sg__utils.html#ga38b5fcdae52a6ae333bdda7b24dabd79">sg_read_cb</a> read_cb, void *handle, <a class="el" href="group__sg__utils.html#ga9dcbe0dd618af35cc57ea89ba1bf6ae7">sg_free_cb</a> free_cb, unsigned int status)</td></tr>
-<tr class="separator:ga053cf9631b13433e488f65824ca6c22e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabb7012b6641a23503e8ca806787272d7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gabb7012b6641a23503e8ca806787272d7">sg_httpres_sendfile</a> (struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *res, uint64_t size, uint64_t max_size, uint64_t offset, const char *filename, bool rendered, unsigned int status)</td></tr>
+<tr class="separator:gabb7012b6641a23503e8ca806787272d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae38e335aa49865396adbd3146b064731"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gae38e335aa49865396adbd3146b064731">sg_httpres_sendstream</a> (struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *res, uint64_t size, <a class="el" href="group__sg__utils.html#ga38b5fcdae52a6ae333bdda7b24dabd79">sg_read_cb</a> read_cb, void *handle, <a class="el" href="group__sg__utils.html#ga9dcbe0dd618af35cc57ea89ba1bf6ae7">sg_free_cb</a> free_cb, unsigned int status)</td></tr>
+<tr class="separator:gae38e335aa49865396adbd3146b064731"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9da0e0278135544ce709a242e3f34a52"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga9da0e0278135544ce709a242e3f34a52">sg_httpres_zsendbinary</a> (struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *res, void *buf, size_t size, const char *content_type, unsigned int status)</td></tr>
+<tr class="separator:ga9da0e0278135544ce709a242e3f34a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae92a2487fd2dbd01499ccac509c8487c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gae92a2487fd2dbd01499ccac509c8487c">sg_httpres_zsendstream</a> (struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *res, <a class="el" href="group__sg__utils.html#ga38b5fcdae52a6ae333bdda7b24dabd79">sg_read_cb</a> read_cb, void *handle, <a class="el" href="group__sg__utils.html#ga9dcbe0dd618af35cc57ea89ba1bf6ae7">sg_free_cb</a> free_cb, unsigned int status)</td></tr>
+<tr class="separator:gae92a2487fd2dbd01499ccac509c8487c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga761b37fcc1c1aeb0bd3043935f61ec9f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga761b37fcc1c1aeb0bd3043935f61ec9f">sg_httpres_clear</a> (struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *res)</td></tr>
 <tr class="separator:ga761b37fcc1c1aeb0bd3043935f61ec9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga287d2c4bea3ac0377f7784325ed460c8"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga287d2c4bea3ac0377f7784325ed460c8">sg_httpsrv_new2</a> (<a class="el" href="group__sg__httpsrv.html#ga0f194f2d19e0a893a233aac05c5f3267">sg_httpauth_cb</a> auth_cb, void *auth_cls, <a class="el" href="group__sg__httpsrv.html#gaaca87e1ea0ab0b2911f1fb5ddefee7af">sg_httpreq_cb</a> req_cb, void *req_cls, <a class="el" href="group__sg__utils.html#gacf4b1e969cdaedde53d5fe5b7341d902">sg_err_cb</a> err_cb, void *err_cls) __attribute__((malloc))</td></tr>
-<tr class="separator:ga287d2c4bea3ac0377f7784325ed460c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3d4c9e9f5978b491bcf2ad6880d1fd67"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga3d4c9e9f5978b491bcf2ad6880d1fd67">sg_httpsrv_new2</a> (<a class="el" href="group__sg__httpsrv.html#ga0f194f2d19e0a893a233aac05c5f3267">sg_httpauth_cb</a> auth_cb, <a class="el" href="group__sg__httpsrv.html#gaaca87e1ea0ab0b2911f1fb5ddefee7af">sg_httpreq_cb</a> req_cb, <a class="el" href="group__sg__utils.html#gacf4b1e969cdaedde53d5fe5b7341d902">sg_err_cb</a> err_cb, void *cls) __attribute__((malloc))</td></tr>
+<tr class="separator:ga3d4c9e9f5978b491bcf2ad6880d1fd67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga56a6469371909b36270f0e877fbc69a8"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga56a6469371909b36270f0e877fbc69a8">sg_httpsrv_new</a> (<a class="el" href="group__sg__httpsrv.html#gaaca87e1ea0ab0b2911f1fb5ddefee7af">sg_httpreq_cb</a> cb, void *cls) __attribute__((malloc))</td></tr>
 <tr class="separator:ga56a6469371909b36270f0e877fbc69a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac377679c831c0b428ee80b2f63174bf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gac377679c831c0b428ee80b2f63174bf8">sg_httpsrv_free</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv)</td></tr>
@@ -216,7 +227,7 @@ Functions</h2></td></tr>
 <tr class="separator:gafdc2bab56e952bd8395f2ebfd91469f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaae0590a22f2c669426339e008b4c2602"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gaae0590a22f2c669426339e008b4c2602">sg_httpsrv_is_threaded</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv)</td></tr>
 <tr class="separator:gaae0590a22f2c669426339e008b4c2602"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga8d04441d9e3b19830ea3b52bd4691f60"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga8d04441d9e3b19830ea3b52bd4691f60">sg_httpsrv_set_upld_cbs</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv, <a class="el" href="group__sg__httpsrv.html#gad15f040368dbf7c65df8d3477e95f0d6">sg_httpupld_cb</a> cb, void *cls, <a class="el" href="group__sg__utils.html#gaf0ee0cb8f53795abb8f051eed9c6e51a">sg_write_cb</a> write_cb, <a class="el" href="group__sg__utils.html#ga9dcbe0dd618af35cc57ea89ba1bf6ae7">sg_free_cb</a> free_cb, <a class="el" href="group__sg__utils.html#ga742b3f7c158b7403cfc6e6480cf61c41">sg_save_cb</a> save_cb, <a class="el" href="group__sg__utils.html#ga4f32fa1cdc5d1731d5fbbff1c9a17b80">sg_save_as_cb</a> save_as_cb)</td></tr>
+<tr class="memitem:ga8d04441d9e3b19830ea3b52bd4691f60"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga8d04441d9e3b19830ea3b52bd4691f60">sg_httpsrv_set_upld_cbs</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv, <a class="el" href="group__sg__httpsrv.html#gad15f040368dbf7c65df8d3477e95f0d6">sg_httpupld_cb</a> cb, void *cls, <a class="el" href="group__sg__utils.html#gad3fa3639d86e65c76f0172749d928a9c">sg_write_cb</a> write_cb, <a class="el" href="group__sg__utils.html#ga9dcbe0dd618af35cc57ea89ba1bf6ae7">sg_free_cb</a> free_cb, <a class="el" href="group__sg__utils.html#ga742b3f7c158b7403cfc6e6480cf61c41">sg_save_cb</a> save_cb, <a class="el" href="group__sg__utils.html#ga4f32fa1cdc5d1731d5fbbff1c9a17b80">sg_save_as_cb</a> save_as_cb)</td></tr>
 <tr class="separator:ga8d04441d9e3b19830ea3b52bd4691f60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1312341d27e319f83085ae1cd05bba12"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga1312341d27e319f83085ae1cd05bba12">sg_httpsrv_set_upld_dir</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv, const char *dir)</td></tr>
 <tr class="separator:ga1312341d27e319f83085ae1cd05bba12"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -246,8 +257,6 @@ Functions</h2></td></tr>
 <tr class="separator:ga4e66cdc1a1a6b2e9d6880f77d7f5c458"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga66dd01824d5648a7c487e35e5169a877"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga66dd01824d5648a7c487e35e5169a877">sg_httpsrv_con_limit</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv)</td></tr>
 <tr class="separator:ga66dd01824d5648a7c487e35e5169a877"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabe1c665201114bedfe2767e3f304b0cb"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gabe1c665201114bedfe2767e3f304b0cb">sg_httpread_end</a> (bool err)</td></tr>
-<tr class="separator:gabe1c665201114bedfe2767e3f304b0cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p class="">Fast event-driven HTTP server. </p>
@@ -293,22 +302,176 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>Response handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>Null-terminated string. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">content_type</td><td><code>Content-Type</code> of the content. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">content_type</td><td>Content type. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>HTTP status code. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
-    <tr><td class="paramname">EALREADY</td><td>- Operation already in progress. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">EALREADY</td><td>Operation already in progress. </td></tr>
+    <tr><td class="paramname">ENOMEM</td><td>Out of memory. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section warning"><dt>Warning</dt><dd>It exits the application if called when no memory space is available. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpauth_8c-example.html#a7">example_httpauth.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a5">example_httpcookie.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a2">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a2">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpsrv_tls_8c-example.html#a2">example_httpsrv_tls.c</a>, <a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a5">example_httpsrv_tls_cert_auth.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a13">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a4">example_router_srv.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpauth_8c-example.html#a7">example_httpauth.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a4">example_httpcookie.c</a>, <a class="el" href="example_httpreq_payload_8c-example.html#a4">example_httpreq_payload.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a2">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a2">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpsrv_tls_8c-example.html#a2">example_httpsrv_tls.c</a>, <a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a5">example_httpsrv_tls_cert_auth.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a13">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a4">example_router_srv.c</a>.</dd>
 </dl>
+</div>
+</div>
+<a id="ga06ece83b9ccba09faf4a0f94a8ae312f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga06ece83b9ccba09faf4a0f94a8ae312f">&#9670;&nbsp;</a></span>sg_httpres_download</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define sg_httpres_download</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">res, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">filename&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#gabb7012b6641a23503e8ca806787272d7">sg_httpres_sendfile</a>((res), 0, 0, 0, (filename), false, (200))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="">Offer a file as download. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>Response handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>Path of the file to be sent. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">EALREADY</td><td>Operation already in progress. </td></tr>
+    <tr><td class="paramname">EISDIR</td><td>Is a directory. </td></tr>
+    <tr><td class="paramname">EBADF</td><td>Bad file number. </td></tr>
+    <tr><td class="paramname">ENOMEM</td><td>Out of memory. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpuplds_8c-example.html#a20">example_httpuplds.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a id="ga056959fd26689cd05f8255b75de30817"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga056959fd26689cd05f8255b75de30817">&#9670;&nbsp;</a></span>sg_httpres_render</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define sg_httpres_render</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">res, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">filename&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#gabb7012b6641a23503e8ca806787272d7">sg_httpres_sendfile</a>((res), 0, 0, 0, (filename), true, (200))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="">Sends a file to be rendered. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>Response handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>Path of the file to be sent. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">EALREADY</td><td>Operation already in progress. </td></tr>
+    <tr><td class="paramname">EISDIR</td><td>Is a directory. </td></tr>
+    <tr><td class="paramname">EBADF</td><td>Bad file number. </td></tr>
+    <tr><td class="paramname">ENOMEM</td><td>Out of memory. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gae3596317f8cf6683140d445240b7792c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae3596317f8cf6683140d445240b7792c">&#9670;&nbsp;</a></span>sg_httpres_zsend</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define sg_httpres_zsend</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">res, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">val, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">content_type, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">status&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#ga9da0e0278135544ce709a242e3f34a52">sg_httpres_zsendbinary</a>((res), (void *) (val), ((val != NULL) ? strlen((val)) : 0), (content_type), (status))</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="">Compresses a null-terminated string content and sends it to the client. The compression is done by zlib library using the DEFLATE compression algorithm. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>Response handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>Null-terminated string. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">content_type</td><td>Content type. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>HTTP status code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">ENOMEM</td><td>Out of memory. </td></tr>
+    <tr><td class="paramname">ENOBUFS</td><td>No buffer space available. </td></tr>
+    <tr><td class="paramname">EALREADY</td><td>Operation already in progress. </td></tr>
+    <tr><td class="paramname">Z_&lt;ERROR&gt;</td><td>zlib error as negative number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>When compression succeeds, the header <code>Content-Encoding: deflate</code> is automatically added to the response. </dd></dl>
+
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation</h2>
@@ -367,8 +530,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">E&lt;ERROR&gt;</td><td>- User-defined error to refuse the upload. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">E&lt;ERROR&gt;</td><td>User-defined error to refuse the upload. </td></tr>
   </table>
   </dd>
 </dl>
@@ -395,8 +558,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">E&lt;ERROR&gt;</td><td>- User-defined error to stop list iteration. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">E&lt;ERROR&gt;</td><td>User-defined error to stop list iteration. </td></tr>
   </table>
   </dd>
 </dl>
@@ -460,13 +623,13 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
-    <tr><td class="paramname">EALREADY</td><td>- Realm already set. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">EALREADY</td><td>Realm already set. </td></tr>
+    <tr><td class="paramname">ENOMEM</td><td>Out of memory. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section warning"><dt>Warning</dt><dd>It exits the application if called when no memory space is available. </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpauth_8c-example.html#a3">example_httpauth.c</a>.</dd>
 </dl>
 </div>
@@ -537,15 +700,16 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">auth</td><td>Authentication handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">justification</td><td>Justification message. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">content_type</td><td><code>Content-Type</code> of the justification. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">content_type</td><td>Content type. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
-    <tr><td class="paramname">EALREADY</td><td>- Already denied. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">EALREADY</td><td>Already denied. </td></tr>
+    <tr><td class="paramname">ENOMEM</td><td>Out of memory. </td></tr>
   </table>
   </dd>
 </dl>
@@ -576,8 +740,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
   </table>
   </dd>
 </dl>
@@ -689,9 +853,9 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
-    <tr><td class="paramname">E&lt;ERROR&gt;</td><td>- User-defined error to abort the list iteration. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">E&lt;ERROR&gt;</td><td>User-defined error to abort the list iteration. </td></tr>
   </table>
   </dd>
 </dl>
@@ -721,8 +885,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1007,10 +1171,10 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
-    <tr><td class="paramname">EEXIST</td><td>- File already exists (if <b><code class="paramname">overwritten</code></b> is <code>false</code>). </td></tr>
-    <tr><td class="paramname">EISDIR</td><td>- Destination file is a directory. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">EEXIST</td><td>File already exists (if <b><code class="paramname">overwritten</code></b> is <code>false</code>). </td></tr>
+    <tr><td class="paramname">EISDIR</td><td>Destination file is a directory. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1059,10 +1223,10 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
-    <tr><td class="paramname">EEXIST</td><td>- File already exists (if <b><code class="paramname">overwritten</code></b> is <code>true</code>). </td></tr>
-    <tr><td class="paramname">EISDIR</td><td>- Destination file is a directory. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">EEXIST</td><td>File already exists (if <b><code class="paramname">overwritten</code></b> is <code>true</code>). </td></tr>
+    <tr><td class="paramname">EISDIR</td><td>Destination file is a directory. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1098,7 +1262,8 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>The headers map is automatically freed by the library. </dd></dl>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpcomp_8c-example.html#a3">example_httpcomp.c</a>.</dd>
+</dl>
 </div>
 </div>
 <a id="ga9573144c847ffdfdf822ce88006f1e2b"></a>
@@ -1130,7 +1295,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>The cookies map is automatically freed by the library. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpcookie_8c-example.html#a3">example_httpcookie.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpcookie_8c-example.html#a5">example_httpcookie.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1289,7 +1454,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpcookie_8c-example.html#a4">example_httpcookie.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a13">example_router_srv.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpcookie_8c-example.html#a3">example_httpcookie.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a13">example_router_srv.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1322,7 +1487,8 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>The form payload instance is automatically freed by the library. </dd></dl>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpreq_payload_8c-example.html#a3">example_httpreq_payload.c</a>.</dd>
+</dl>
 </div>
 </div>
 <a id="ga7a8cb69e38d3462dc44bf6717291e82b"></a>
@@ -1346,7 +1512,12 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the client is uploading data, <code>false</code> otherwise. If <b><code class="paramname">req</code></b> is null, sets the <code>errno</code> to <code>EINVAL</code>. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>If the client is uploading data, <code>false</code> otherwise. If <b><code class="paramname">req</code></b> is null, sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpuplds_8c-example.html#a16">example_httpuplds.c</a>.</dd>
 </dl>
 </div>
@@ -1407,8 +1578,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1450,8 +1621,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1562,12 +1733,12 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">ENOMEM</td><td>Out of memory. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section warning"><dt>Warning</dt><dd>It exits the application if called when no memory space is available. </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpcookie_8c-example.html#a7">example_httpcookie.c</a>.</dd>
 </dl>
 </div>
@@ -1620,25 +1791,26 @@ Functions</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>Response handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>Binary content. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Content size. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">content_type</td><td><code>Content-Type</code> of the content. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">content_type</td><td>Content type. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>HTTP status code. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
-    <tr><td class="paramname">EALREADY</td><td>- Operation already in progress. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">EALREADY</td><td>Operation already in progress. </td></tr>
+    <tr><td class="paramname">ENOMEM</td><td>Out of memory. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section warning"><dt>Warning</dt><dd>It exits the application if called when no memory space is available. </dd></dl>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpcomp_8c-example.html#a6">example_httpcomp.c</a>.</dd>
+</dl>
 </div>
 </div>
-<a id="gaf8c0562106bffb91504f15554179a347"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf8c0562106bffb91504f15554179a347">&#9670;&nbsp;</a></span>sg_httpres_sendfile()</h2>
+<a id="gabb7012b6641a23503e8ca806787272d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabb7012b6641a23503e8ca806787272d7">&#9670;&nbsp;</a></span>sg_httpres_sendfile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1652,14 +1824,20 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>block_size</em>, </td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint64_t&#160;</td>
           <td class="paramname"><em>max_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1689,8 +1867,9 @@ Functions</h2></td></tr>
 <p class="">Sends a file to the client. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>Response handle. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">block_size</td><td>Preferred block size for file loading. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">max_size</td><td>Maximum allowed file size. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Size of the file to be sent. Use zero to calculate automatically. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">max_size</td><td>Maximum allowed file size. Use zero for no limit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Offset to start reading from in the file to be sent. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>Path of the file to be sent. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">rendered</td><td>If <code>true</code> the file is rendered, otherwise downloaded. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>HTTP status code. </td></tr>
@@ -1699,22 +1878,21 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
-    <tr><td class="paramname">EALREADY</td><td>- Operation already in progress. </td></tr>
-    <tr><td class="paramname">EISDIR</td><td>- Is a directory. </td></tr>
-    <tr><td class="paramname">EBADF</td><td>- Bad file number. </td></tr>
-    <tr><td class="paramname">EFBIG</td><td>- File too large. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">EALREADY</td><td>Operation already in progress. </td></tr>
+    <tr><td class="paramname">EISDIR</td><td>Is a directory. </td></tr>
+    <tr><td class="paramname">EBADF</td><td>Bad file number. </td></tr>
+    <tr><td class="paramname">EFBIG</td><td>File too large. </td></tr>
+    <tr><td class="paramname">ENOMEM</td><td>Out of memory. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section warning"><dt>Warning</dt><dd>It exits the application if called when no memory space is available. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpuplds_8c-example.html#a20">example_httpuplds.c</a>.</dd>
-</dl>
+
 </div>
 </div>
-<a id="ga053cf9631b13433e488f65824ca6c22e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga053cf9631b13433e488f65824ca6c22e">&#9670;&nbsp;</a></span>sg_httpres_sendstream()</h2>
+<a id="gae38e335aa49865396adbd3146b064731"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae38e335aa49865396adbd3146b064731">&#9670;&nbsp;</a></span>sg_httpres_sendstream()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1730,12 +1908,6 @@ Functions</h2></td></tr>
           <td></td>
           <td class="paramtype">uint64_t&#160;</td>
           <td class="paramname"><em>size</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>block_size</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1772,7 +1944,6 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>Response handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Size of the stream. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">block_size</td><td>Preferred block size for stream loading. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">read_cb</td><td>Callback to read data from stream handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Stream handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">free_cb</td><td>Callback to free the stream handle. </td></tr>
@@ -1782,14 +1953,150 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
-    <tr><td class="paramname">EALREADY</td><td>- Operation already in progress. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">EALREADY</td><td>Operation already in progress. </td></tr>
+    <tr><td class="paramname">ENOMEM</td><td>Out of memory. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Use <code>size = 0</code> if the stream size is unknown. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>It exits the application if called when no memory space is available. </dd></dl>
+
+</div>
+</div>
+<a id="ga9da0e0278135544ce709a242e3f34a52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9da0e0278135544ce709a242e3f34a52">&#9670;&nbsp;</a></span>sg_httpres_zsendbinary()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sg_httpres_zsendbinary </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *&#160;</td>
+          <td class="paramname"><em>res</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>content_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="">Compresses a binary content and sends it to the client. The compression is done by zlib library using the DEFLATE compression algorithm. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>Response handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>Binary content. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Content size. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">content_type</td><td>Content type. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>HTTP status code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">ENOMEM</td><td>Out of memory. </td></tr>
+    <tr><td class="paramname">ENOBUFS</td><td>No buffer space available. </td></tr>
+    <tr><td class="paramname">EALREADY</td><td>Operation already in progress. </td></tr>
+    <tr><td class="paramname">Z_&lt;ERROR&gt;</td><td>zlib error as negative number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>When compression succeeds, the header <code>Content-Encoding: deflate</code> is automatically added to the response. </dd></dl>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpcomp_8c-example.html#a5">example_httpcomp.c</a>.</dd>
+</dl>
+</div>
+</div>
+<a id="gae92a2487fd2dbd01499ccac509c8487c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae92a2487fd2dbd01499ccac509c8487c">&#9670;&nbsp;</a></span>sg_httpres_zsendstream()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sg_httpres_zsendstream </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *&#160;</td>
+          <td class="paramname"><em>res</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__sg__utils.html#ga38b5fcdae52a6ae333bdda7b24dabd79">sg_read_cb</a>&#160;</td>
+          <td class="paramname"><em>read_cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__sg__utils.html#ga9dcbe0dd618af35cc57ea89ba1bf6ae7">sg_free_cb</a>&#160;</td>
+          <td class="paramname"><em>free_cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="">Compresses a stream and sends it to the client. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>Response handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">read_cb</td><td>Callback to read data from stream handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Stream handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">free_cb</td><td>Callback to free the stream handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>HTTP status code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">EALREADY</td><td>Operation already in progress. </td></tr>
+    <tr><td class="paramname">ENOMEM</td><td>Out of memory. </td></tr>
+    <tr><td class="paramname">Z_&lt;ERROR&gt;</td><td>zlib error as negative number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>When compression succeeds, the header <code>Content-Encoding: deflate</code> is automatically added to the response. </dd></dl>
 
 </div>
 </div>
@@ -1816,16 +2123,16 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="ga287d2c4bea3ac0377f7784325ed460c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga287d2c4bea3ac0377f7784325ed460c8">&#9670;&nbsp;</a></span>sg_httpsrv_new2()</h2>
+<a id="ga3d4c9e9f5978b491bcf2ad6880d1fd67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3d4c9e9f5978b491bcf2ad6880d1fd67">&#9670;&nbsp;</a></span>sg_httpsrv_new2()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1839,20 +2146,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>auth_cls</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype"><a class="el" href="group__sg__httpsrv.html#gaaca87e1ea0ab0b2911f1fb5ddefee7af">sg_httpreq_cb</a>&#160;</td>
           <td class="paramname"><em>req_cb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>req_cls</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1864,7 +2159,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>err_cls</em>&#160;</td>
+          <td class="paramname"><em>cls</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1876,17 +2171,16 @@ Functions</h2></td></tr>
 <p class="">Creates a new HTTP server handle. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">auth_cb</td><td>Callback to grant/deny user access to the server resources. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">auth_cls</td><td>User-defined closure for <b><code class="paramname">auth_cb</code></b>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">req_cb</td><td>Callback to handle requests and responses. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">req_cls</td><td>User-defined closure for <b><code class="paramname">req_cb</code></b>. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">err_cb</td><td>Callback to handle server errors. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">err_cls</td><td>User-defined closure for <b><code class="paramname">err_cb</code></b>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cls</td><td>User-defined closure. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>New HTTP server handle. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
+    <tr><td class="paramname">NULL</td><td>If no memory space is available. </td></tr>
     <tr><td class="paramname">NULL</td><td>If the <b><code class="paramname">req_cb</code></b> or <b><code class="paramname">err_cb</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
@@ -1934,7 +2228,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpcookie_8c-example.html#a9">example_httpcookie.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a4">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a4">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpsrv_tls_8c-example.html#a4">example_httpsrv_tls.c</a>, <a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a8">example_httpsrv_tls_cert_auth.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a22">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a17">example_router_srv.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpcomp_8c-example.html#a8">example_httpcomp.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a9">example_httpcookie.c</a>, <a class="el" href="example_httpreq_payload_8c-example.html#a7">example_httpreq_payload.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a4">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a4">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpsrv_tls_8c-example.html#a4">example_httpsrv_tls.c</a>, <a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a8">example_httpsrv_tls_cert_auth.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a22">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a17">example_router_srv.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1953,14 +2247,14 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Frees the server handle previously allocated by <a class="el" href="group__sg__httpsrv.html#ga56a6469371909b36270f0e877fbc69a8">sg_httpsrv_new()</a> or <a class="el" href="group__sg__httpsrv.html#ga287d2c4bea3ac0377f7784325ed460c8">sg_httpsrv_new2()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p class="">Frees the server handle previously allocated by <a class="el" href="group__sg__httpsrv.html#ga56a6469371909b36270f0e877fbc69a8">sg_httpsrv_new()</a> or <a class="el" href="group__sg__httpsrv.html#ga3d4c9e9f5978b491bcf2ad6880d1fd67">sg_httpsrv_new2()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">srv</td><td>Pointer of the server to be freed. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>If the server is running it stops before being freed. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpauth_8c-example.html#a11">example_httpauth.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a11">example_httpcookie.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a6">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a8">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpsrv_tls_8c-example.html#a6">example_httpsrv_tls.c</a>, <a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a11">example_httpsrv_tls_cert_auth.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a24">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a19">example_router_srv.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpauth_8c-example.html#a11">example_httpauth.c</a>, <a class="el" href="example_httpcomp_8c-example.html#a10">example_httpcomp.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a11">example_httpcookie.c</a>, <a class="el" href="example_httpreq_payload_8c-example.html#a9">example_httpreq_payload.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a6">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a8">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpsrv_tls_8c-example.html#a6">example_httpsrv_tls.c</a>, <a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a11">example_httpsrv_tls_cert_auth.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a24">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a19">example_router_srv.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -2038,7 +2332,12 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the server is started, <code>false</code> otherwise. If <b><code class="paramname">srv</code></b> is null, sets the <code>errno</code> to <code>EINVAL</code>. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>If the server is started, <code>false</code> otherwise. If <b><code class="paramname">srv</code></b> is null, sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section note"><dt>Note</dt><dd>If port is <code>0</code>, the operating system will assign an unused port randomly. </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a9">example_httpsrv_tls_cert_auth.c</a>.</dd>
 </dl>
@@ -2097,7 +2396,12 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the server is started, <code>false</code> otherwise. If <b><code class="paramname">srv</code></b> is null, sets the <code>errno</code> to <code>EINVAL</code>. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>If the server is started, <code>false</code> otherwise. If <b><code class="paramname">srv</code></b> is null, sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section note"><dt>Note</dt><dd>If port is <code>0</code>, the operating system will assign an unused port randomly. </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpsrv_tls_8c-example.html#a5">example_httpsrv_tls.c</a>.</dd>
 </dl>
@@ -2142,9 +2446,14 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the server is started, <code>false</code> otherwise. If <b><code class="paramname">srv</code></b> is null, sets the <code>errno</code> to <code>EINVAL</code>. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>If the server is started, <code>false</code> otherwise. If <b><code class="paramname">srv</code></b> is null, sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section note"><dt>Note</dt><dd>If port is <code>0</code>, the operating system will assign randomly an unused port. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpauth_8c-example.html#a10">example_httpauth.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a10">example_httpcookie.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a5">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a7">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a23">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a18">example_router_srv.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpauth_8c-example.html#a10">example_httpauth.c</a>, <a class="el" href="example_httpcomp_8c-example.html#a9">example_httpcomp.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a10">example_httpcookie.c</a>, <a class="el" href="example_httpreq_payload_8c-example.html#a8">example_httpreq_payload.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a5">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a7">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a23">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a18">example_router_srv.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -2169,7 +2478,12 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>0</code> if the server is stopped. If <b><code class="paramname">srv</code></b> is null, sets the <code>errno</code> to <code>EINVAL</code>. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>If the server is stopped. If <b><code class="paramname">srv</code></b> is null, sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2195,7 +2509,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Server listening port, <code>0</code> otherwise. If <b><code class="paramname">srv</code></b> is null, sets the <code>errno</code> to <code>EINVAL</code>. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpauth_8c-example.html#a12">example_httpauth.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a12">example_httpcookie.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a7">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a9">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpsrv_tls_8c-example.html#a7">example_httpsrv_tls.c</a>, <a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a10">example_httpsrv_tls_cert_auth.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a25">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a20">example_router_srv.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpauth_8c-example.html#a12">example_httpauth.c</a>, <a class="el" href="example_httpcomp_8c-example.html#a11">example_httpcomp.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a12">example_httpcookie.c</a>, <a class="el" href="example_httpreq_payload_8c-example.html#a10">example_httpreq_payload.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a7">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a9">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpsrv_tls_8c-example.html#a7">example_httpsrv_tls.c</a>, <a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a10">example_httpsrv_tls_cert_auth.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a25">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a20">example_router_srv.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -2220,7 +2534,12 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><code>true</code> if the server is in threaded model, <code>false</code> otherwise. If <b><code class="paramname">srv</code></b> is null, sets the <code>errno</code> to <code>EINVAL</code>. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>If the server is in threaded model, <code>false</code> otherwise. If <b><code class="paramname">srv</code></b> is null, sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -2251,7 +2570,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="group__sg__utils.html#gaf0ee0cb8f53795abb8f051eed9c6e51a">sg_write_cb</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="group__sg__utils.html#gad3fa3639d86e65c76f0172749d928a9c">sg_write_cb</a>&#160;</td>
           <td class="paramname"><em>write_cb</em>, </td>
         </tr>
         <tr>
@@ -2293,8 +2612,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2335,8 +2654,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2408,8 +2727,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2475,14 +2794,14 @@ Functions</h2></td></tr>
 <p class="">Sets a limit to the total payload. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">srv</td><td>Server handle. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">limit</td><td>Payload total limit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">limit</td><td>Payload total limit. Use zero for no limit. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2548,14 +2867,14 @@ Functions</h2></td></tr>
 <p class="">Sets a limit to the total uploads. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">srv</td><td>Server handle. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">limit</td><td>Uploads total limit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">limit</td><td>Uploads total limit. Use zero for no limit. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2621,14 +2940,14 @@ Functions</h2></td></tr>
 <p class="">Sets the size for the thread pool. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">srv</td><td>Server handle. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Thread pool size. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Thread pool size. Size greater than 1 enables the thread pooling. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2695,14 +3014,14 @@ Functions</h2></td></tr>
 <p class="">Sets the inactivity time to a client get time out. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">srv</td><td>Server handle. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>Timeout (in seconds). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>Timeout (in seconds). Use zero for infinity timeout. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2768,14 +3087,14 @@ Functions</h2></td></tr>
 <p class="">Sets the limit of concurrent connections. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">srv</td><td>Server handle. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">limit</td><td>Concurrent connections limit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">limit</td><td>Concurrent connections limit. Use zero for no limit. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2814,35 +3133,10 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="gabe1c665201114bedfe2767e3f304b0cb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabe1c665201114bedfe2767e3f304b0cb">&#9670;&nbsp;</a></span>sg_httpread_end()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ssize_t sg_httpread_end </td>
-          <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>err</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p class="">Returns a value to end a stream reading processed by <a class="el" href="group__sg__httpsrv.html#ga053cf9631b13433e488f65824ca6c22e">sg_httpres_sendstream()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">err</td><td><code>true</code> to return a value indicating a stream reading error. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Value to end a stream reading. </dd></dl>
-
-</div>
-</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 1 2018 09:29:04 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 13 2019 18:47:32 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

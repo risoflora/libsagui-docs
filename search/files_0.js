@@ -2,7 +2,9 @@ var searchData=
 [
   ['example_5fentrypoint_2eh',['example_entrypoint.h',['../example__entrypoint_8h.html',1,'']]],
   ['example_5fhttpauth_2eh',['example_httpauth.h',['../example__httpauth_8h.html',1,'']]],
+  ['example_5fhttpcomp_2eh',['example_httpcomp.h',['../example__httpcomp_8h.html',1,'']]],
   ['example_5fhttpcookie_2eh',['example_httpcookie.h',['../example__httpcookie_8h.html',1,'']]],
+  ['example_5fhttpreq_5fpayload_2eh',['example_httpreq_payload.h',['../example__httpreq__payload_8h.html',1,'']]],
   ['example_5fhttpsrv_2eh',['example_httpsrv.h',['../example__httpsrv_8h.html',1,'']]],
   ['example_5fhttpsrv_5fbenchmark_2eh',['example_httpsrv_benchmark.h',['../example__httpsrv__benchmark_8h.html',1,'']]],
   ['example_5fhttpsrv_5ftls_2eh',['example_httpsrv_tls.h',['../example__httpsrv__tls_8h.html',1,'']]],

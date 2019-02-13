@@ -18,6 +18,7 @@
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="sagui.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Sagui library
-   &#160;<span id="projectnumber">v1.2.0</span>
+   &#160;<span id="projectnumber">v2.0.0</span>
    </div>
-   <div id="projectbrief">–– an ideal C library to develop cross-platform HTTP servers.</div>
+   <div id="projectbrief">Cross-platform library which helps to develop web servers or frameworks.</div>
   </td>
  </tr>
  </tbody>
@@ -154,8 +155,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">E&lt;ERROR&gt;</td><td>- User-defined error to stop pairs iteration. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">E&lt;ERROR&gt;</td><td>User-defined error to stop pairs iteration. </td></tr>
   </table>
   </dd>
 </dl>
@@ -183,9 +184,9 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">-1</td><td>- A &lt; B. </td></tr>
-    <tr><td class="paramname">0</td><td>- A == B. </td></tr>
-    <tr><td class="paramname">1</td><td>- A &gt; B. </td></tr>
+    <tr><td class="paramname">-1</td><td>A &lt; B. </td></tr>
+    <tr><td class="paramname">0</td><td>A == B. </td></tr>
+    <tr><td class="paramname">1</td><td>A &gt; B. </td></tr>
   </table>
   </dd>
 </dl>
@@ -298,13 +299,13 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">ENOMEM</td><td>Out of memory. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>It cannot check if a name already exists in a pair added to the <b><code class="paramname">map</code></b>, then the uniqueness must be managed by the application. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>It exits the application if called when no memory space is available. </dd></dl>
 
 </div>
 </div>
@@ -349,13 +350,13 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">ENOMEM</td><td>Out of memory. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>If a name already exists in a pair previously added into the <b><code class="paramname">map</code></b>, then the function replaces its value, otherwise it is added as a new pair. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>It exits the application if called when no memory space is available. </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_strmap_8c-example.html#a3">example_strmap.c</a>.</dd>
 </dl>
 </div>
@@ -401,9 +402,10 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
-    <tr><td class="paramname">ENOENT</td><td>- Pair not found. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">ENOENT</td><td>Pair not found. </td></tr>
+    <tr><td class="paramname">ENOMEM</td><td>Out of memory. </td></tr>
   </table>
   </dd>
 </dl>
@@ -450,7 +452,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpcookie_8c-example.html#a6">example_httpcookie.c</a>, and <a class="el" href="example_httpuplds_8c-example.html#a18">example_httpuplds.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpcomp_8c-example.html#a4">example_httpcomp.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a6">example_httpcookie.c</a>, and <a class="el" href="example_httpuplds_8c-example.html#a18">example_httpuplds.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -488,9 +490,10 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
-    <tr><td class="paramname">ENOENT</td><td>- Pair already removed. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">ENOENT</td><td>Pair already removed. </td></tr>
+    <tr><td class="paramname">ENOMEM</td><td>Out of memory. </td></tr>
   </table>
   </dd>
 </dl>
@@ -538,8 +541,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
   </table>
   </dd>
 </dl>
@@ -589,8 +592,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
   </table>
   </dd>
 </dl>
@@ -652,8 +655,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
   </table>
   </dd>
 </dl>
@@ -688,7 +691,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 1 2018 09:29:04 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 13 2019 18:47:32 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

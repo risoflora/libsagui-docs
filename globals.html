@@ -18,6 +18,7 @@
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="sagui.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Sagui library
-   &#160;<span id="projectnumber">v1.2.0</span>
+   &#160;<span id="projectnumber">v2.0.0</span>
    </div>
-   <div id="projectbrief">–– an ideal C library to develop cross-platform HTTP servers.</div>
+   <div id="projectbrief">Cross-platform library which helps to develop web servers or frameworks.</div>
   </td>
  </tr>
  </tbody>
@@ -141,6 +142,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>sg_entrypoints_rm()
 : <a class="el" href="group__sg__routing.html#ga33b722321ced4f5b0292e51d31a88c99">sagui.h</a>
 </li>
+<li>sg_eor()
+: <a class="el" href="group__sg__utils.html#ga0ba94e47ecb156d243aac0025a501025">sagui.h</a>
+</li>
 <li>sg_err_cb
 : <a class="el" href="group__sg__utils.html#gacf4b1e969cdaedde53d5fe5b7341d902">sagui.h</a>
 </li>
@@ -155,12 +159,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>sg_free_cb
 : <a class="el" href="group__sg__utils.html#ga9dcbe0dd618af35cc57ea89ba1bf6ae7">sagui.h</a>
-</li>
-<li>sg_get_segments_cb
-: <a class="el" href="group__sg__routing.html#ga46e8d2a2a66676633498e14d608207a3">sagui.h</a>
-</li>
-<li>sg_get_vars_cb
-: <a class="el" href="group__sg__routing.html#ga09a73cf73e20582e2e432f77457a1ee5">sagui.h</a>
 </li>
 <li>sg_httpauth_cancel()
 : <a class="el" href="group__sg__httpsrv.html#gabf9948efae2f7d7c01671bca66b63d95">sagui.h</a>
@@ -182,9 +180,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>sg_httpauth_usr()
 : <a class="el" href="group__sg__httpsrv.html#ga67b671eb23171a88c53978a36f9a07d1">sagui.h</a>
-</li>
-<li>sg_httpread_end()
-: <a class="el" href="group__sg__httpsrv.html#gabe1c665201114bedfe2767e3f304b0cb">sagui.h</a>
 </li>
 <li>sg_httpreq_cb
 : <a class="el" href="group__sg__httpsrv.html#gaaca87e1ea0ab0b2911f1fb5ddefee7af">sagui.h</a>
@@ -231,8 +226,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>sg_httpres_clear()
 : <a class="el" href="group__sg__httpsrv.html#ga761b37fcc1c1aeb0bd3043935f61ec9f">sagui.h</a>
 </li>
+<li>sg_httpres_download
+: <a class="el" href="group__sg__httpsrv.html#ga06ece83b9ccba09faf4a0f94a8ae312f">sagui.h</a>
+</li>
 <li>sg_httpres_headers()
 : <a class="el" href="group__sg__httpsrv.html#ga3b118b0764fa2a5f568ea24aa31429e9">sagui.h</a>
+</li>
+<li>sg_httpres_render
+: <a class="el" href="group__sg__httpsrv.html#ga056959fd26689cd05f8255b75de30817">sagui.h</a>
 </li>
 <li>sg_httpres_send
 : <a class="el" href="group__sg__httpsrv.html#gae64c67ed9caee0189cf4fd669a869255">sagui.h</a>
@@ -241,13 +242,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="group__sg__httpsrv.html#ga0017d599cc14fd21682c01d20ffedf8c">sagui.h</a>
 </li>
 <li>sg_httpres_sendfile()
-: <a class="el" href="group__sg__httpsrv.html#gaf8c0562106bffb91504f15554179a347">sagui.h</a>
+: <a class="el" href="group__sg__httpsrv.html#gabb7012b6641a23503e8ca806787272d7">sagui.h</a>
 </li>
 <li>sg_httpres_sendstream()
-: <a class="el" href="group__sg__httpsrv.html#ga053cf9631b13433e488f65824ca6c22e">sagui.h</a>
+: <a class="el" href="group__sg__httpsrv.html#gae38e335aa49865396adbd3146b064731">sagui.h</a>
 </li>
 <li>sg_httpres_set_cookie()
 : <a class="el" href="group__sg__httpsrv.html#gac33202e0cb8f5a60cd0b80289bb3dbc0">sagui.h</a>
+</li>
+<li>sg_httpres_zsend
+: <a class="el" href="group__sg__httpsrv.html#gae3596317f8cf6683140d445240b7792c">sagui.h</a>
+</li>
+<li>sg_httpres_zsendbinary()
+: <a class="el" href="group__sg__httpsrv.html#ga9da0e0278135544ce709a242e3f34a52">sagui.h</a>
+</li>
+<li>sg_httpres_zsendstream()
+: <a class="el" href="group__sg__httpsrv.html#gae92a2487fd2dbd01499ccac509c8487c">sagui.h</a>
 </li>
 <li>sg_httpsrv_con_limit()
 : <a class="el" href="group__sg__httpsrv.html#ga66dd01824d5648a7c487e35e5169a877">sagui.h</a>
@@ -268,7 +278,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="group__sg__httpsrv.html#ga56a6469371909b36270f0e877fbc69a8">sagui.h</a>
 </li>
 <li>sg_httpsrv_new2()
-: <a class="el" href="group__sg__httpsrv.html#ga287d2c4bea3ac0377f7784325ed460c8">sagui.h</a>
+: <a class="el" href="group__sg__httpsrv.html#ga3d4c9e9f5978b491bcf2ad6880d1fd67">sagui.h</a>
 </li>
 <li>sg_httpsrv_payld_limit()
 : <a class="el" href="group__sg__httpsrv.html#ga3f6a852abda5f22ba55848db7dd094ef">sagui.h</a>
@@ -366,6 +376,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>sg_is_post()
 : <a class="el" href="group__sg__utils.html#ga4e4b1adf77a316ebae033459f7bdb286">sagui.h</a>
 </li>
+<li>sg_malloc()
+: <a class="el" href="group__sg__utils.html#gab0f09ab80ec44384b54ef2d9945c4e99">sagui.h</a>
+</li>
 <li>sg_read_cb
 : <a class="el" href="group__sg__utils.html#ga38b5fcdae52a6ae333bdda7b24dabd79">sagui.h</a>
 </li>
@@ -374,12 +387,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>sg_route_cb
 : <a class="el" href="group__sg__routing.html#gae4e1ad027986612a8bbf6c47e5b6ae90">sagui.h</a>
-</li>
-<li>sg_route_get_segments()
-: <a class="el" href="group__sg__routing.html#gafd095e8e9d2265850ec7c1023a10d91a">sagui.h</a>
-</li>
-<li>sg_route_get_vars()
-: <a class="el" href="group__sg__routing.html#ga2ec027b6889e763f56687da9f7c18643">sagui.h</a>
 </li>
 <li>sg_route_handle()
 : <a class="el" href="group__sg__routing.html#ga2aab6b7f245c5a7690f4ec84ea5f9968">sagui.h</a>
@@ -396,8 +403,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>sg_route_rawpattern()
 : <a class="el" href="group__sg__routing.html#ga5e7b2455b22020f86496c7c626228710">sagui.h</a>
 </li>
+<li>sg_route_segments_iter()
+: <a class="el" href="group__sg__routing.html#gafe888e10ef5ee78be213726b7a123e11">sagui.h</a>
+</li>
 <li>sg_route_user_data()
 : <a class="el" href="group__sg__routing.html#gac5e2f71a3c652c87596506b3c9ebf8f4">sagui.h</a>
+</li>
+<li>sg_route_vars_iter()
+: <a class="el" href="group__sg__routing.html#gacba727ceb5d0716f41976f5e4449fbc1">sagui.h</a>
 </li>
 <li>sg_router_dispatch()
 : <a class="el" href="group__sg__routing.html#ga20914c40040042aab8f0e6edf9a750ca">sagui.h</a>
@@ -446,6 +459,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>sg_save_cb
 : <a class="el" href="group__sg__utils.html#ga742b3f7c158b7403cfc6e6480cf61c41">sagui.h</a>
+</li>
+<li>sg_segments_iter_cb
+: <a class="el" href="group__sg__routing.html#ga99d3704c80656c540520285f04c26467">sagui.h</a>
 </li>
 <li>sg_str_clear()
 : <a class="el" href="group__sg__str.html#ga0ebdf6cc438564501d00e5dcc7e6b656">sagui.h</a>
@@ -519,6 +535,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>sg_tmpdir()
 : <a class="el" href="group__sg__utils.html#ga8d2de390bcc7bad03fed29922eb565b3">sagui.h</a>
 </li>
+<li>sg_vars_iter_cb
+: <a class="el" href="group__sg__routing.html#gaf18c38495abde803a8c0f3bca433e231">sagui.h</a>
+</li>
 <li>sg_version()
 : <a class="el" href="group__sg__utils.html#ga455f7e7b901e0c7201d037eb4f115327">sagui.h</a>
 </li>
@@ -526,13 +545,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 : <a class="el" href="group__sg__utils.html#gad37a5356732928b8ae4d41b29c7c1737">sagui.h</a>
 </li>
 <li>sg_write_cb
-: <a class="el" href="group__sg__utils.html#gaf0ee0cb8f53795abb8f051eed9c6e51a">sagui.h</a>
+: <a class="el" href="group__sg__utils.html#gad3fa3639d86e65c76f0172749d928a9c">sagui.h</a>
 </li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 1 2018 09:29:04 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 13 2019 18:47:32 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

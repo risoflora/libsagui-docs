@@ -18,6 +18,7 @@
 /* @license-end */
 </script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="sagui.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -27,9 +28,9 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Sagui library
-   &#160;<span id="projectnumber">v1.2.0</span>
+   &#160;<span id="projectnumber">v2.0.0</span>
    </div>
-   <div id="projectbrief">–– an ideal C library to develop cross-platform HTTP servers.</div>
+   <div id="projectbrief">Cross-platform library which helps to develop web servers or frameworks.</div>
   </td>
  </tr>
  </tbody>
@@ -134,7 +135,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p class="">Creates a new zero-initialized string handle. </p><dl class="section return"><dt>Returns</dt><dd>String handle. </dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>It exits the application if called when no memory space is available. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">NULL</td><td>If no memory space is available. </td></tr>
+  </table>
+  </dd>
+</dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpuplds_8c-example.html#a4">example_httpuplds.c</a>, <a class="el" href="example_router_srv_8c-example.html#a6">example_router_srv.c</a>, and <a class="el" href="example_str_8c-example.html#a1">example_str.c</a>.</dd>
 </dl>
 </div>
@@ -205,8 +211,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
   </table>
   </dd>
 </dl>
@@ -254,8 +260,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
   </table>
   </dd>
 </dl>
@@ -303,8 +309,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
   </table>
   </dd>
 </dl>
@@ -340,7 +346,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpuplds_8c-example.html#a11">example_httpuplds.c</a>, <a class="el" href="example_router_srv_8c-example.html#a9">example_router_srv.c</a>, and <a class="el" href="example_str_8c-example.html#a3">example_str.c</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpreq_payload_8c-example.html#a5">example_httpreq_payload.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a11">example_httpuplds.c</a>, <a class="el" href="example_router_srv_8c-example.html#a9">example_router_srv.c</a>, and <a class="el" href="example_str_8c-example.html#a3">example_str.c</a>.</dd>
 </dl>
 </div>
 </div>
@@ -368,7 +374,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Total string length. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
   </table>
   </dd>
 </dl>
@@ -398,8 +404,8 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>- Success. </td></tr>
-    <tr><td class="paramname">EINVAL</td><td>- Invalid argument. </td></tr>
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
   </table>
   </dd>
 </dl>
@@ -410,7 +416,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 1 2018 09:29:04 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 13 2019 18:47:32 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>
