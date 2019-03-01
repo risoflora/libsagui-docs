@@ -28,7 +28,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Sagui library
-   &#160;<span id="projectnumber">v2.0.0</span>
+   &#160;<span id="projectnumber">v2.2.0</span>
    </div>
    <div id="projectbrief">Cross-platform library which helps to develop web servers or frameworks.</div>
   </td>
@@ -111,12 +111,16 @@ Data Structures</h2></td></tr>
 Macros</h2></td></tr>
 <tr class="memitem:gae64c67ed9caee0189cf4fd669a869255"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gae64c67ed9caee0189cf4fd669a869255">sg_httpres_send</a>(res,  val,  content_type,  status)&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#ga0017d599cc14fd21682c01d20ffedf8c">sg_httpres_sendbinary</a>((res), (void *) (val), ((val != NULL) ? strlen((val)) : 0), (content_type), (status))</td></tr>
 <tr class="separator:gae64c67ed9caee0189cf4fd669a869255"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga06ece83b9ccba09faf4a0f94a8ae312f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga06ece83b9ccba09faf4a0f94a8ae312f">sg_httpres_download</a>(res,  filename)&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#gabb7012b6641a23503e8ca806787272d7">sg_httpres_sendfile</a>((res), 0, 0, 0, (filename), false, (200))</td></tr>
+<tr class="memitem:ga06ece83b9ccba09faf4a0f94a8ae312f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga06ece83b9ccba09faf4a0f94a8ae312f">sg_httpres_download</a>(res,  filename)&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#ga77c97b57d5aabd594da5cda6957eb416">sg_httpres_sendfile2</a>((res), 0, 0, 0, (filename), &quot;attachment&quot;, 200)</td></tr>
 <tr class="separator:ga06ece83b9ccba09faf4a0f94a8ae312f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga056959fd26689cd05f8255b75de30817"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga056959fd26689cd05f8255b75de30817">sg_httpres_render</a>(res,  filename)&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#gabb7012b6641a23503e8ca806787272d7">sg_httpres_sendfile</a>((res), 0, 0, 0, (filename), true, (200))</td></tr>
+<tr class="memitem:ga056959fd26689cd05f8255b75de30817"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga056959fd26689cd05f8255b75de30817">sg_httpres_render</a>(res,  filename)&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#ga77c97b57d5aabd594da5cda6957eb416">sg_httpres_sendfile2</a>((res), 0, 0, 0, (filename), &quot;inline&quot;, 200)</td></tr>
 <tr class="separator:ga056959fd26689cd05f8255b75de30817"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae3596317f8cf6683140d445240b7792c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gae3596317f8cf6683140d445240b7792c">sg_httpres_zsend</a>(res,  val,  content_type,  status)&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#ga9da0e0278135544ce709a242e3f34a52">sg_httpres_zsendbinary</a>((res), (void *) (val), ((val != NULL) ? strlen((val)) : 0), (content_type), (status))</td></tr>
 <tr class="separator:gae3596317f8cf6683140d445240b7792c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae2e2eda661bf2868503f3799506287f8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gae2e2eda661bf2868503f3799506287f8">sg_httpres_zdownload</a>(res,  filename)&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#gaf1af6a4ba7a05e73c71ce9e82c4aae9a">sg_httpres_zsendfile2</a>((res), 1, 0, 0, 0, (filename), &quot;attachment&quot;, 200)</td></tr>
+<tr class="separator:gae2e2eda661bf2868503f3799506287f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6f809862a7922804306e9ba49328c528"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga6f809862a7922804306e9ba49328c528">sg_httpres_zrender</a>(res,  filename)&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#gaf1af6a4ba7a05e73c71ce9e82c4aae9a">sg_httpres_zsendfile2</a>((res), 1, 0, 0, 0, (filename), &quot;inline&quot;, 200)</td></tr>
+<tr class="separator:ga6f809862a7922804306e9ba49328c528"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -199,14 +203,24 @@ Functions</h2></td></tr>
 <tr class="separator:gac33202e0cb8f5a60cd0b80289bb3dbc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0017d599cc14fd21682c01d20ffedf8c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga0017d599cc14fd21682c01d20ffedf8c">sg_httpres_sendbinary</a> (struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *res, void *buf, size_t size, const char *content_type, unsigned int status)</td></tr>
 <tr class="separator:ga0017d599cc14fd21682c01d20ffedf8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gabb7012b6641a23503e8ca806787272d7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gabb7012b6641a23503e8ca806787272d7">sg_httpres_sendfile</a> (struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *res, uint64_t size, uint64_t max_size, uint64_t offset, const char *filename, bool rendered, unsigned int status)</td></tr>
-<tr class="separator:gabb7012b6641a23503e8ca806787272d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga77c97b57d5aabd594da5cda6957eb416"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga77c97b57d5aabd594da5cda6957eb416">sg_httpres_sendfile2</a> (struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *res, uint64_t size, uint64_t max_size, uint64_t offset, const char *filename, const char *disposition, unsigned int status)</td></tr>
+<tr class="separator:ga77c97b57d5aabd594da5cda6957eb416"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0401ed2042038408ada0b61ffb41d554"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga0401ed2042038408ada0b61ffb41d554">sg_httpres_sendfile</a> (struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *res, uint64_t size, uint64_t max_size, uint64_t offset, const char *filename, bool downloaded, unsigned int status)</td></tr>
+<tr class="separator:ga0401ed2042038408ada0b61ffb41d554"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae38e335aa49865396adbd3146b064731"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gae38e335aa49865396adbd3146b064731">sg_httpres_sendstream</a> (struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *res, uint64_t size, <a class="el" href="group__sg__utils.html#ga38b5fcdae52a6ae333bdda7b24dabd79">sg_read_cb</a> read_cb, void *handle, <a class="el" href="group__sg__utils.html#ga9dcbe0dd618af35cc57ea89ba1bf6ae7">sg_free_cb</a> free_cb, unsigned int status)</td></tr>
 <tr class="separator:gae38e335aa49865396adbd3146b064731"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae694f5effc49fb1addd379db40bf74a0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gae694f5effc49fb1addd379db40bf74a0">sg_httpres_zsendbinary2</a> (struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *res, int level, void *buf, size_t size, const char *content_type, unsigned int status)</td></tr>
+<tr class="separator:gae694f5effc49fb1addd379db40bf74a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9da0e0278135544ce709a242e3f34a52"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga9da0e0278135544ce709a242e3f34a52">sg_httpres_zsendbinary</a> (struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *res, void *buf, size_t size, const char *content_type, unsigned int status)</td></tr>
 <tr class="separator:ga9da0e0278135544ce709a242e3f34a52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0972f49b3a30a53fab4ef3835a98e2bf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga0972f49b3a30a53fab4ef3835a98e2bf">sg_httpres_zsendstream2</a> (struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *res, int level, uint64_t size, <a class="el" href="group__sg__utils.html#ga38b5fcdae52a6ae333bdda7b24dabd79">sg_read_cb</a> read_cb, void *handle, <a class="el" href="group__sg__utils.html#ga9dcbe0dd618af35cc57ea89ba1bf6ae7">sg_free_cb</a> free_cb, unsigned int status)</td></tr>
+<tr class="separator:ga0972f49b3a30a53fab4ef3835a98e2bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae92a2487fd2dbd01499ccac509c8487c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gae92a2487fd2dbd01499ccac509c8487c">sg_httpres_zsendstream</a> (struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *res, <a class="el" href="group__sg__utils.html#ga38b5fcdae52a6ae333bdda7b24dabd79">sg_read_cb</a> read_cb, void *handle, <a class="el" href="group__sg__utils.html#ga9dcbe0dd618af35cc57ea89ba1bf6ae7">sg_free_cb</a> free_cb, unsigned int status)</td></tr>
 <tr class="separator:gae92a2487fd2dbd01499ccac509c8487c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf1af6a4ba7a05e73c71ce9e82c4aae9a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gaf1af6a4ba7a05e73c71ce9e82c4aae9a">sg_httpres_zsendfile2</a> (struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *res, int level, uint64_t size, uint64_t max_size, uint64_t offset, const char *filename, const char *disposition, unsigned int status)</td></tr>
+<tr class="separator:gaf1af6a4ba7a05e73c71ce9e82c4aae9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga597c27f8d6ddb58d6b44a2e668e877a8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga597c27f8d6ddb58d6b44a2e668e877a8">sg_httpres_zsendfile</a> (struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *res, uint64_t size, uint64_t max_size, uint64_t offset, const char *filename, bool downloaded, unsigned int status)</td></tr>
+<tr class="separator:ga597c27f8d6ddb58d6b44a2e668e877a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga761b37fcc1c1aeb0bd3043935f61ec9f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga761b37fcc1c1aeb0bd3043935f61ec9f">sg_httpres_clear</a> (struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *res)</td></tr>
 <tr class="separator:ga761b37fcc1c1aeb0bd3043935f61ec9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3d4c9e9f5978b491bcf2ad6880d1fd67"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga3d4c9e9f5978b491bcf2ad6880d1fd67">sg_httpsrv_new2</a> (<a class="el" href="group__sg__httpsrv.html#ga0f194f2d19e0a893a233aac05c5f3267">sg_httpauth_cb</a> auth_cb, <a class="el" href="group__sg__httpsrv.html#gaaca87e1ea0ab0b2911f1fb5ddefee7af">sg_httpreq_cb</a> req_cb, <a class="el" href="group__sg__utils.html#gacf4b1e969cdaedde53d5fe5b7341d902">sg_err_cb</a> err_cb, void *cls) __attribute__((malloc))</td></tr>
@@ -341,7 +355,7 @@ Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#gabb7012b6641a23503e8ca806787272d7">sg_httpres_sendfile</a>((res), 0, 0, 0, (filename), false, (200))</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#ga77c97b57d5aabd594da5cda6957eb416">sg_httpres_sendfile2</a>((res), 0, 0, 0, (filename), &quot;attachment&quot;, 200)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -388,7 +402,7 @@ Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#gabb7012b6641a23503e8ca806787272d7">sg_httpres_sendfile</a>((res), 0, 0, 0, (filename), true, (200))</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#ga77c97b57d5aabd594da5cda6957eb416">sg_httpres_sendfile2</a>((res), 0, 0, 0, (filename), &quot;inline&quot;, 200)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -471,6 +485,102 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>When compression succeeds, the header <code>Content-Encoding: deflate</code> is automatically added to the response. </dd></dl>
+
+</div>
+</div>
+<a id="gae2e2eda661bf2868503f3799506287f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae2e2eda661bf2868503f3799506287f8">&#9670;&nbsp;</a></span>sg_httpres_zdownload</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define sg_httpres_zdownload</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">res, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">filename&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#gaf1af6a4ba7a05e73c71ce9e82c4aae9a">sg_httpres_zsendfile2</a>((res), 1, 0, 0, 0, (filename), &quot;attachment&quot;, 200)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="">Compresses a file in Gzip format and offer it as download. The compression is done by zlib library using the DEFLATE compression algorithm. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>Response handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>Path of the file to be compressed and sent. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">EALREADY</td><td>Operation already in progress. </td></tr>
+    <tr><td class="paramname">EISDIR</td><td>Is a directory. </td></tr>
+    <tr><td class="paramname">EBADF</td><td>Bad file number. </td></tr>
+    <tr><td class="paramname">ENOMEM</td><td>Out of memory. </td></tr>
+    <tr><td class="paramname">Z_&lt;ERROR&gt;</td><td>zlib error as negative number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>When compression succeeds, the header <code>Content-Encoding: gzip</code> is automatically added to the response. </dd></dl>
+
+</div>
+</div>
+<a id="ga6f809862a7922804306e9ba49328c528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6f809862a7922804306e9ba49328c528">&#9670;&nbsp;</a></span>sg_httpres_zrender</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define sg_httpres_zrender</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">res, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">filename&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#gaf1af6a4ba7a05e73c71ce9e82c4aae9a">sg_httpres_zsendfile2</a>((res), 1, 0, 0, 0, (filename), &quot;inline&quot;, 200)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="">Compresses a file in Gzip formant and sends it to be rendered. The compression is done by zlib library using the DEFLATE compression algorithm. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>Response handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>Path of the file to be sent. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">EALREADY</td><td>Operation already in progress. </td></tr>
+    <tr><td class="paramname">EISDIR</td><td>Is a directory. </td></tr>
+    <tr><td class="paramname">EBADF</td><td>Bad file number. </td></tr>
+    <tr><td class="paramname">ENOMEM</td><td>Out of memory. </td></tr>
+    <tr><td class="paramname">Z_&lt;ERROR&gt;</td><td>zlib error as negative number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>When compression succeeds, the header <code>Content-Encoding: gzip</code> is automatically added to the response. </dd></dl>
 
 </div>
 </div>
@@ -1809,8 +1919,91 @@ Functions</h2></td></tr>
 </dl>
 </div>
 </div>
-<a id="gabb7012b6641a23503e8ca806787272d7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabb7012b6641a23503e8ca806787272d7">&#9670;&nbsp;</a></span>sg_httpres_sendfile()</h2>
+<a id="ga77c97b57d5aabd594da5cda6957eb416"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga77c97b57d5aabd594da5cda6957eb416">&#9670;&nbsp;</a></span>sg_httpres_sendfile2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sg_httpres_sendfile2 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *&#160;</td>
+          <td class="paramname"><em>res</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>max_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>disposition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="">Sends a file to the client. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>Response handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Size of the file to be sent. Use zero to calculate automatically. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">max_size</td><td>Maximum allowed file size. Use zero for no limit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Offset to start reading from in the file to be sent. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>Path of the file to be sent. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">disposition</td><td>Content disposition as null-terminated string (attachment or inline). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>HTTP status code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">EALREADY</td><td>Operation already in progress. </td></tr>
+    <tr><td class="paramname">EISDIR</td><td>Is a directory. </td></tr>
+    <tr><td class="paramname">EBADF</td><td>Bad file number. </td></tr>
+    <tr><td class="paramname">EFBIG</td><td>File too large. </td></tr>
+    <tr><td class="paramname">ENOMEM</td><td>Out of memory. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section warning"><dt>Warning</dt><dd>The parameter <code>disposition</code> is not checked internally, thus any non-<code>NULL</code> value is passed directly to the header <code>Content-Disposition</code>. </dd></dl>
+
+</div>
+</div>
+<a id="ga0401ed2042038408ada0b61ffb41d554"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0401ed2042038408ada0b61ffb41d554">&#9670;&nbsp;</a></span>sg_httpres_sendfile()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1849,7 +2042,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>rendered</em>, </td>
+          <td class="paramname"><em>downloaded</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1871,7 +2064,7 @@ Functions</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">max_size</td><td>Maximum allowed file size. Use zero for no limit. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Offset to start reading from in the file to be sent. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>Path of the file to be sent. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">rendered</td><td>If <code>true</code> the file is rendered, otherwise downloaded. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">downloaded</td><td>If <code>true</code> it offer the file as download. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>HTTP status code. </td></tr>
   </table>
   </dd>
@@ -1964,6 +2157,81 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="gae694f5effc49fb1addd379db40bf74a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae694f5effc49fb1addd379db40bf74a0">&#9670;&nbsp;</a></span>sg_httpres_zsendbinary2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sg_httpres_zsendbinary2 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *&#160;</td>
+          <td class="paramname"><em>res</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>content_type</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="">Compresses a binary content and sends it to the client. The compression is done by zlib library using the DEFLATE compression algorithm. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>Response handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>Compression level (1..9 or -1 for default). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>Binary content. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Content size. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">content_type</td><td>Content type. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>HTTP status code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">ENOMEM</td><td>Out of memory. </td></tr>
+    <tr><td class="paramname">ENOBUFS</td><td>No buffer space available. </td></tr>
+    <tr><td class="paramname">EALREADY</td><td>Operation already in progress. </td></tr>
+    <tr><td class="paramname">Z_&lt;ERROR&gt;</td><td>zlib error as negative number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>When compression succeeds, the header <code>Content-Encoding: deflate</code> is automatically added to the response. </dd></dl>
+
+</div>
+</div>
 <a id="ga9da0e0278135544ce709a242e3f34a52"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga9da0e0278135544ce709a242e3f34a52">&#9670;&nbsp;</a></span>sg_httpres_zsendbinary()</h2>
 
@@ -2033,6 +2301,87 @@ Functions</h2></td></tr>
 </dl>
 </div>
 </div>
+<a id="ga0972f49b3a30a53fab4ef3835a98e2bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0972f49b3a30a53fab4ef3835a98e2bf">&#9670;&nbsp;</a></span>sg_httpres_zsendstream2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sg_httpres_zsendstream2 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *&#160;</td>
+          <td class="paramname"><em>res</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__sg__utils.html#ga38b5fcdae52a6ae333bdda7b24dabd79">sg_read_cb</a>&#160;</td>
+          <td class="paramname"><em>read_cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__sg__utils.html#ga9dcbe0dd618af35cc57ea89ba1bf6ae7">sg_free_cb</a>&#160;</td>
+          <td class="paramname"><em>free_cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="">Compresses a stream and sends it to the client. The compression is done by zlib library using the DEFLATE compression algorithm. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>Response handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>Compression level (1..9 or -1 for default). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Size of the stream. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">read_cb</td><td>Callback to read data from stream handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">handle</td><td>Stream handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">free_cb</td><td>Callback to free the stream handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>HTTP status code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">EALREADY</td><td>Operation already in progress. </td></tr>
+    <tr><td class="paramname">ENOMEM</td><td>Out of memory. </td></tr>
+    <tr><td class="paramname">Z_&lt;ERROR&gt;</td><td>zlib error as negative number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>When compression succeeds, the header <code>Content-Encoding: deflate</code> is automatically added to the response. </dd></dl>
+
+</div>
+</div>
 <a id="gae92a2487fd2dbd01499ccac509c8487c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gae92a2487fd2dbd01499ccac509c8487c">&#9670;&nbsp;</a></span>sg_httpres_zsendstream()</h2>
 
@@ -2076,7 +2425,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Compresses a stream and sends it to the client. </p><dl class="params"><dt>Parameters</dt><dd>
+<p class="">Compresses a stream and sends it to the client. The compression is done by zlib library using the DEFLATE compression algorithm. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>Response handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">read_cb</td><td>Callback to read data from stream handle. </td></tr>
@@ -2097,6 +2446,182 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>When compression succeeds, the header <code>Content-Encoding: deflate</code> is automatically added to the response. </dd></dl>
+
+</div>
+</div>
+<a id="gaf1af6a4ba7a05e73c71ce9e82c4aae9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf1af6a4ba7a05e73c71ce9e82c4aae9a">&#9670;&nbsp;</a></span>sg_httpres_zsendfile2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sg_httpres_zsendfile2 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *&#160;</td>
+          <td class="paramname"><em>res</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>max_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>disposition</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="">Compresses a file in Gzip format and sends it to the client. The compression is done by zlib library using the DEFLATE compression algorithm. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>Response handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">level</td><td>Compression level (1..9 or -1 for default). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Size of the file to be sent. Use zero to calculate automatically. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">max_size</td><td>Maximum allowed file size. Use zero for no limit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Offset to start reading from in the file to be sent. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>Path of the file to be sent. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">disposition</td><td>Content disposition as null-terminated string (attachment or inline). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>HTTP status code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">EALREADY</td><td>Operation already in progress. </td></tr>
+    <tr><td class="paramname">EISDIR</td><td>Is a directory. </td></tr>
+    <tr><td class="paramname">EBADF</td><td>Bad file number. </td></tr>
+    <tr><td class="paramname">EFBIG</td><td>File too large. </td></tr>
+    <tr><td class="paramname">ENOMEM</td><td>Out of memory. </td></tr>
+    <tr><td class="paramname">Z_&lt;ERROR&gt;</td><td>zlib error as negative number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>When compression succeeds, the header <code>Content-Encoding: gzip</code> is automatically added to the response. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>The parameter <code>disposition</code> is not checked internally, thus any non-<code>NULL</code> value is passed directly to the header <code>Content-Disposition</code>. </dd></dl>
+
+</div>
+</div>
+<a id="ga597c27f8d6ddb58d6b44a2e668e877a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga597c27f8d6ddb58d6b44a2e668e877a8">&#9670;&nbsp;</a></span>sg_httpres_zsendfile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sg_httpres_zsendfile </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structsg__httpres.html">sg_httpres</a> *&#160;</td>
+          <td class="paramname"><em>res</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>max_size</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint64_t&#160;</td>
+          <td class="paramname"><em>offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>filename</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>downloaded</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>status</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p class="">Compresses a file in Gzip format and sends it to the client. The compression is done by zlib library using the DEFLATE compression algorithm. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">res</td><td>Response handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Size of the file to be sent. Use zero to calculate automatically. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">max_size</td><td>Maximum allowed file size. Use zero for no limit. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Offset to start reading from in the file to be sent. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>Path of the file to be sent. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">downloaded</td><td>If <code>true</code> it offer the file as download. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">status</td><td>HTTP status code. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">EALREADY</td><td>Operation already in progress. </td></tr>
+    <tr><td class="paramname">EISDIR</td><td>Is a directory. </td></tr>
+    <tr><td class="paramname">EBADF</td><td>Bad file number. </td></tr>
+    <tr><td class="paramname">EFBIG</td><td>File too large. </td></tr>
+    <tr><td class="paramname">ENOMEM</td><td>Out of memory. </td></tr>
+    <tr><td class="paramname">Z_&lt;ERROR&gt;</td><td>zlib error as negative number. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>When compression succeeds, the header <code>Content-Encoding: gzip</code> is automatically added to the response. </dd></dl>
 
 </div>
 </div>
@@ -3136,7 +3661,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 13 2019 18:47:32 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Mar 1 2019 03:56:23 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>
