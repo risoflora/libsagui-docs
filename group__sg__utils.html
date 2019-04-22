@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
@@ -28,7 +28,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Sagui library
-   &#160;<span id="projectnumber">v2.2.0</span>
+   &#160;<span id="projectnumber">v2.4.0</span>
    </div>
    <div id="projectbrief">Cross-platform library which helps to develop web servers or frameworks.</div>
   </td>
@@ -94,6 +94,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
+<tr class="memitem:gaf6825ec9e9a3c6f81fbbb39899e908ef"><td class="memItemLeft" align="right" valign="top">typedef void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#gaf6825ec9e9a3c6f81fbbb39899e908ef">sg_malloc_func</a>) (size_t size)</td></tr>
+<tr class="separator:gaf6825ec9e9a3c6f81fbbb39899e908ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafd9b0953a0d55daf420cacf3582a530d"><td class="memItemLeft" align="right" valign="top">typedef void *(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#gafd9b0953a0d55daf420cacf3582a530d">sg_realloc_func</a>) (void *ptr, size_t size)</td></tr>
+<tr class="separator:gafd9b0953a0d55daf420cacf3582a530d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1c891524e260e3c54d891e43374a3126"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#ga1c891524e260e3c54d891e43374a3126">sg_free_func</a>) (void *ptr)</td></tr>
+<tr class="separator:ga1c891524e260e3c54d891e43374a3126"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacf4b1e969cdaedde53d5fe5b7341d902"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#gacf4b1e969cdaedde53d5fe5b7341d902">sg_err_cb</a>) (void *cls, const char *err)</td></tr>
 <tr class="separator:gacf4b1e969cdaedde53d5fe5b7341d902"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad3fa3639d86e65c76f0172749d928a9c"><td class="memItemLeft" align="right" valign="top">typedef ssize_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#gad3fa3639d86e65c76f0172749d928a9c">sg_write_cb</a>) (void *handle, uint64_t offset, const char *buf, size_t size)</td></tr>
@@ -113,6 +119,8 @@ Functions</h2></td></tr>
 <tr class="separator:ga455f7e7b901e0c7201d037eb4f115327"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gad37a5356732928b8ae4d41b29c7c1737"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#gad37a5356732928b8ae4d41b29c7c1737">sg_version_str</a> (void)</td></tr>
 <tr class="separator:gad37a5356732928b8ae4d41b29c7c1737"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa783cb7305cb80fc9b97dd68e69d03db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#gaa783cb7305cb80fc9b97dd68e69d03db">sg_mm_set</a> (<a class="el" href="group__sg__utils.html#gaf6825ec9e9a3c6f81fbbb39899e908ef">sg_malloc_func</a> malloc_func, <a class="el" href="group__sg__utils.html#gafd9b0953a0d55daf420cacf3582a530d">sg_realloc_func</a> realloc_func, <a class="el" href="group__sg__utils.html#ga1c891524e260e3c54d891e43374a3126">sg_free_func</a> free_func)</td></tr>
+<tr class="separator:gaa783cb7305cb80fc9b97dd68e69d03db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab0f09ab80ec44384b54ef2d9945c4e99"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#gab0f09ab80ec44384b54ef2d9945c4e99">sg_malloc</a> (size_t size) __attribute__((malloc))</td></tr>
 <tr class="separator:gab0f09ab80ec44384b54ef2d9945c4e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga923b9064c79330aae4e6ae7ca27e8abd"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#ga923b9064c79330aae4e6ae7ca27e8abd">sg_alloc</a> (size_t size) __attribute__((malloc))</td></tr>
@@ -131,10 +139,88 @@ Functions</h2></td></tr>
 <tr class="separator:ga8d2de390bcc7bad03fed29922eb565b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0ba94e47ecb156d243aac0025a501025"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#ga0ba94e47ecb156d243aac0025a501025">sg_eor</a> (bool err)</td></tr>
 <tr class="separator:ga0ba94e47ecb156d243aac0025a501025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga576d2d764d59c25344f7612323af12fd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__utils.html#ga576d2d764d59c25344f7612323af12fd">sg_ip</a> (const void *socket, char *buf, size_t size)</td></tr>
+<tr class="separator:ga576d2d764d59c25344f7612323af12fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p class="">All utility functions of the library. </p>
+<p>All utility functions of the library. </p>
 <h2 class="groupheader">Typedef Documentation</h2>
+<a id="gaf6825ec9e9a3c6f81fbbb39899e908ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf6825ec9e9a3c6f81fbbb39899e908ef">&#9670;&nbsp;</a></span>sg_malloc_func</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void*(* sg_malloc_func) (size_t size)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Callback signature used to override the function which allocates a new memory space. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Memory size to be allocated. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer of the allocated memory. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">NULL</td><td>If size is <code>0</code> or no memory space. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="gafd9b0953a0d55daf420cacf3582a530d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafd9b0953a0d55daf420cacf3582a530d">&#9670;&nbsp;</a></span>sg_realloc_func</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void*(* sg_realloc_func) (void *ptr, size_t size)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Callback signature used to override the function which allocates a new zero-initialized memory space. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Memory size to be allocated. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer of the zero-initialized allocated memory. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">NULL</td><td>If size is <code>0</code> or no memory space. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ga1c891524e260e3c54d891e43374a3126"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1c891524e260e3c54d891e43374a3126">&#9670;&nbsp;</a></span>sg_free_func</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* sg_free_func) (void *ptr)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Callback signature used to override the function which reallocates an existing memory block. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">ptr</td><td>Pointer of the memory to be reallocated. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Memory size to be reallocated. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Pointer of the reallocated memory. </dd></dl>
+
+</div>
+</div>
 <a id="gacf4b1e969cdaedde53d5fe5b7341d902"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gacf4b1e969cdaedde53d5fe5b7341d902">&#9670;&nbsp;</a></span>sg_err_cb</h2>
 
@@ -146,7 +232,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Callback signature used by functions that handle errors. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Callback signature used by functions that handle errors. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">cls</td><td>User-defined closure. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">err</td><td>Error message. </td></tr>
@@ -167,7 +253,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Callback signature used by functions that write streams. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Callback signature used by functions that write streams. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">handle</td><td>Stream handle. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">offset</td><td>Current stream offset. </td></tr>
@@ -191,7 +277,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Callback signature used by functions that read streams. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Callback signature used by functions that read streams. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">handle</td><td>Stream handle. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">offset</td><td>Current stream offset. </td></tr>
@@ -215,7 +301,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Callback signature used by functions that free streams. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Callback signature used by functions that free streams. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">handle</td><td>Stream handle. </td></tr>
   </table>
@@ -235,7 +321,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Callback signature used by functions that save streams. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Callback signature used by functions that save streams. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">handle</td><td>Stream handle. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">overwritten</td><td>Overwrite an already existed stream. </td></tr>
@@ -263,7 +349,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Callback signature used by functions that save streams. It allows to specify the destination file path. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Callback signature used by functions that save streams. It allows to specify the destination file path. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">handle</td><td>Stream handle. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">path</td><td>Absolute path to store the stream. </td></tr>
@@ -297,7 +383,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Returns the library version number. </p><dl class="section return"><dt>Returns</dt><dd>Library version packed into a single integer. </dd></dl>
+<p>Returns the library version number. </p><dl class="section return"><dt>Returns</dt><dd>Library version packed into a single integer. </dd></dl>
 
 </div>
 </div>
@@ -316,7 +402,57 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Returns the library version number as string in the format N.N.N. </p><dl class="section return"><dt>Returns</dt><dd>Library version packed into a null-terminated string. </dd></dl>
+<p>Returns the library version number as string in the format <code>&lt;MAJOR&gt;.&lt;MINOR&gt;.&lt;PATCH&gt;</code>. </p><dl class="section return"><dt>Returns</dt><dd>Library version packed into a null-terminated string. </dd></dl>
+
+</div>
+</div>
+<a id="gaa783cb7305cb80fc9b97dd68e69d03db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa783cb7305cb80fc9b97dd68e69d03db">&#9670;&nbsp;</a></span>sg_mm_set()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sg_mm_set </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="group__sg__utils.html#gaf6825ec9e9a3c6f81fbbb39899e908ef">sg_malloc_func</a>&#160;</td>
+          <td class="paramname"><em>malloc_func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__sg__utils.html#gafd9b0953a0d55daf420cacf3582a530d">sg_realloc_func</a>&#160;</td>
+          <td class="paramname"><em>realloc_func</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__sg__utils.html#ga1c891524e260e3c54d891e43374a3126">sg_free_func</a>&#160;</td>
+          <td class="paramname"><em>free_func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Overrides the standard functions <a href="https://linux.die.net/man/3/malloc">malloc(3)</a>, <a href="https://linux.die.net/man/3/realloc">realloc(3)</a> and <a href="https://linux.die.net/man/3/free">free(3)</a> set by default in the memory manager. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">malloc_func</td><td>Reference to override the function <code>malloc()</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">realloc_func</td><td>Reference to override the function <code>realloc()</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">free_func</td><td>Reference to override the function <code>free()</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>It must be called before any other Sagui function or after all resources have been freed. </dd></dl>
 
 </div>
 </div>
@@ -335,7 +471,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Allocates a new memory space. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Allocates a new memory space. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Memory size to be allocated. </td></tr>
   </table>
@@ -348,6 +484,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>Equivalent to <a href="https://linux.die.net/man/3/malloc">malloc(3)</a>. </dd></dl>
 
 </div>
 </div>
@@ -366,7 +503,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Allocates a new zero-initialize memory space. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Allocates a new zero-initialized memory space. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Memory size to be allocated. </td></tr>
   </table>
@@ -379,8 +516,9 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a4">example_httpsrv_tls_cert_auth.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a4">example_httpsrv_tls_cert_auth.c</a>.</dd>
 </dl>
+
 </div>
 </div>
 <a id="gab75ee584c99b78bd2971e85cb7ccce85"></a>
@@ -408,7 +546,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Reallocates an existing memory block. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Reallocates an existing memory block. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">ptr</td><td>Pointer of the memory to be reallocated. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Memory size to be reallocated. </td></tr>
@@ -435,14 +573,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Frees a memory space previously allocated by <a class="el" href="group__sg__utils.html#ga923b9064c79330aae4e6ae7ca27e8abd">sg_alloc()</a> or <a class="el" href="group__sg__utils.html#gab75ee584c99b78bd2971e85cb7ccce85">sg_realloc()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Frees a memory space previously allocated by <a class="el" href="group__sg__utils.html#gab0f09ab80ec44384b54ef2d9945c4e99">sg_malloc()</a>, <a class="el" href="group__sg__utils.html#ga923b9064c79330aae4e6ae7ca27e8abd">sg_alloc()</a> or <a class="el" href="group__sg__utils.html#gab75ee584c99b78bd2971e85cb7ccce85">sg_realloc()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ptr</td><td>Pointer of the memory to be freed. </td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a6">example_httpsrv_tls_cert_auth.c</a>.</dd>
+<dl class="section note"><dt>Note</dt><dd>Equivalent to <a href="https://linux.die.net/man/3/free">free(3)</a>. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a6">example_httpsrv_tls_cert_auth.c</a>.</dd>
 </dl>
+
 </div>
 </div>
 <a id="ga9e97bf43a8b4fc583191d37b0faa633e"></a>
@@ -476,7 +616,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Returns string describing an error number. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Returns string describing an error number. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">errnum</td><td>Error number. </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">errmsg</td><td>Pointer of a string to store the error message. </td></tr>
@@ -485,8 +625,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Pointer to <b><code class="paramname">str</code></b>. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a0">example_httpsrv_tls_cert_auth.c</a>, and <a class="el" href="example_httpuplds_8c-example.html#a9">example_httpuplds.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a0">example_httpsrv_tls_cert_auth.c</a>, and <a class="el" href="example_httpuplds_8c-example.html#a9">example_httpuplds.c</a>.</dd>
 </dl>
+
 </div>
 </div>
 <a id="ga4e4b1adf77a316ebae033459f7bdb286"></a>
@@ -504,7 +645,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Checks if a string is a HTTP post method. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Checks if a string is a HTTP post method. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">method</td><td>Null-terminated string. </td></tr>
   </table>
@@ -534,18 +675,20 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Extracts the entry-point of a path or resource. For example, given a path <code>/api1/customer</code>, the part considered as entry-point is <code>/api1</code>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Extracts the entry-point of a path or resource. For example, given a path <code>/api1/customer</code>, the part considered as entry-point is <code>/api1</code>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>Entry-point as null-terminated string. </td></tr>
+    <tr><td class="paramname">path</td><td>Path as null-terminated string. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>Entry-point as null-terminated string. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">NULL</td><td>If no memory space is available. </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section warning"><dt>Warning</dt><dd>The caller must free the returned value. </dd></dl>
 
 </div>
 </div>
@@ -564,7 +707,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Returns the system temporary directory. </p><dl class="section return"><dt>Returns</dt><dd>Temporary directory as null-terminated string. </dd></dl>
+<p>Returns the system temporary directory. </p><dl class="section return"><dt>Returns</dt><dd>Temporary directory as null-terminated string. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">NULL</td><td>If no memory space is available. </td></tr>
@@ -572,8 +715,9 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section warning"><dt>Warning</dt><dd>The caller must free the returned value. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpuplds_8c-example.html#a19">example_httpuplds.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpuplds_8c-example.html#a19">example_httpuplds.c</a>.</dd>
 </dl>
+
 </div>
 </div>
 <a id="ga0ba94e47ecb156d243aac0025a501025"></a>
@@ -591,7 +735,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Indicates the end-of-read processed in <a class="el" href="group__sg__httpsrv.html#gae38e335aa49865396adbd3146b064731">sg_httpres_sendstream()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Indicates the end-of-read processed in <a class="el" href="group__sg__httpsrv.html#gae38e335aa49865396adbd3146b064731">sg_httpres_sendstream()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">err</td><td><code>true</code> to return a value indicating a stream reading error. </td></tr>
   </table>
@@ -601,10 +745,61 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga576d2d764d59c25344f7612323af12fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga576d2d764d59c25344f7612323af12fd">&#9670;&nbsp;</a></span>sg_ip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sg_ip </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>socket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Obtains the IP of a socket handle (e.g. the one returned by <a class="el" href="group__sg__httpsrv.html#ga67eda6df2814495982184a49b10044aa">sg_httpreq_client()</a>) into a null-terminated string. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">socket</td><td>Socket handle. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">buf</td><td>Pointer of the string to store the IP. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">size</td><td>Size of the string to store the IP. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">EAFNOSUPPORT</td><td>Address family not supported by protocol. </td></tr>
+    <tr><td class="paramname">ENOSPC</td><td>No space left on device. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 1 2019 03:56:23 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 22 2019 03:48:22 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>

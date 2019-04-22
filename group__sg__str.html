@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
@@ -28,7 +28,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Sagui library
-   &#160;<span id="projectnumber">v2.2.0</span>
+   &#160;<span id="projectnumber">v2.4.0</span>
    </div>
    <div id="projectbrief">Cross-platform library which helps to develop web servers or frameworks.</div>
   </td>
@@ -117,7 +117,7 @@ Functions</h2></td></tr>
 <tr class="separator:ga0ebdf6cc438564501d00e5dcc7e6b656"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p class="">String handle and its related functions. </p>
+<p>String handle and its related functions. </p>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="ga2ed5949c6c8e3baff32c6231600b074d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga2ed5949c6c8e3baff32c6231600b074d">&#9670;&nbsp;</a></span>sg_str_new()</h2>
@@ -134,15 +134,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Creates a new zero-initialized string handle. </p><dl class="section return"><dt>Returns</dt><dd>String handle. </dd></dl>
+<p>Creates a new zero-initialized string handle. </p><dl class="section return"><dt>Returns</dt><dd>String handle. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">NULL</td><td>If no memory space is available. </td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpuplds_8c-example.html#a4">example_httpuplds.c</a>, <a class="el" href="example_router_srv_8c-example.html#a6">example_router_srv.c</a>, and <a class="el" href="example_str_8c-example.html#a1">example_str.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpuplds_8c-example.html#a4">example_httpuplds.c</a>, <a class="el" href="example_router_srv_8c-example.html#a6">example_router_srv.c</a>, and <a class="el" href="example_str_8c-example.html#a1">example_str.c</a>.</dd>
 </dl>
+
 </div>
 </div>
 <a id="gaae1e56717404fde09aea8639bbfa8d80"></a>
@@ -160,14 +161,15 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Frees the string handle previously allocated by <a class="el" href="group__sg__str.html#ga2ed5949c6c8e3baff32c6231600b074d">sg_str_new()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Frees the string handle previously allocated by <a class="el" href="group__sg__str.html#ga2ed5949c6c8e3baff32c6231600b074d">sg_str_new()</a>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>Pointer of the string handle to be freed. </td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpuplds_8c-example.html#a14">example_httpuplds.c</a>, <a class="el" href="example_router_srv_8c-example.html#a10">example_router_srv.c</a>, and <a class="el" href="example_str_8c-example.html#a4">example_str.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpuplds_8c-example.html#a14">example_httpuplds.c</a>, <a class="el" href="example_router_srv_8c-example.html#a10">example_router_srv.c</a>, and <a class="el" href="example_str_8c-example.html#a4">example_str.c</a>.</dd>
 </dl>
+
 </div>
 </div>
 <a id="ga2e75bfd4c36ffd580b437296a8e015bd"></a>
@@ -201,7 +203,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Writes a null-terminated string to the string handle <b><code class="paramname">str</code></b>. All strings previously written are kept. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Writes a null-terminated string to the string handle <b><code class="paramname">str</code></b>. All strings previously written are kept. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>String handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>String to be written. </td></tr>
@@ -250,7 +252,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Prints a null-terminated formatted string from the argument list to the string handle <b><code class="paramname">str</code></b>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Prints a null-terminated formatted string from the argument list to the string handle <b><code class="paramname">str</code></b>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>String handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">fmt</td><td>Formatted string (following the same <a href="https://linux.die.net/man/3/printf"><code>printf()</code></a> format specification). </td></tr>
@@ -299,7 +301,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Prints a null-terminated formatted string to the string handle <b><code class="paramname">str</code></b>. All strings previously written are kept. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Prints a null-terminated formatted string to the string handle <b><code class="paramname">str</code></b>. All strings previously written are kept. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>String handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">fmt</td><td>Formatted string (following the same <a href="https://linux.die.net/man/3/printf"><code>printf()</code></a> format specification). </td></tr>
@@ -314,8 +316,9 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpuplds_8c-example.html#a5">example_httpuplds.c</a>, <a class="el" href="example_router_srv_8c-example.html#a8">example_router_srv.c</a>, and <a class="el" href="example_str_8c-example.html#a2">example_str.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpuplds_8c-example.html#a5">example_httpuplds.c</a>, <a class="el" href="example_router_srv_8c-example.html#a8">example_router_srv.c</a>, and <a class="el" href="example_str_8c-example.html#a2">example_str.c</a>.</dd>
 </dl>
+
 </div>
 </div>
 <a id="ga420406c7f2760983588eaa39d0f678a9"></a>
@@ -333,7 +336,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Returns the null-terminated string content from the string handle <b><code class="paramname">str</code></b>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Returns the null-terminated string content from the string handle <b><code class="paramname">str</code></b>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>String handle. </td></tr>
   </table>
@@ -346,8 +349,9 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpreq_payload_8c-example.html#a5">example_httpreq_payload.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a11">example_httpuplds.c</a>, <a class="el" href="example_router_srv_8c-example.html#a9">example_router_srv.c</a>, and <a class="el" href="example_str_8c-example.html#a3">example_str.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpreq_payload_8c-example.html#a5">example_httpreq_payload.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a11">example_httpuplds.c</a>, <a class="el" href="example_router_srv_8c-example.html#a9">example_router_srv.c</a>, and <a class="el" href="example_str_8c-example.html#a3">example_str.c</a>.</dd>
 </dl>
+
 </div>
 </div>
 <a id="ga5fee7ead6e4e5140800e387bed90066a"></a>
@@ -365,7 +369,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Returns the total string length from the handle <b><code class="paramname">str</code></b>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Returns the total string length from the handle <b><code class="paramname">str</code></b>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>String handle. </td></tr>
   </table>
@@ -396,7 +400,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p class="">Cleans all existing content in the string handle <b><code class="paramname">str</code></b>. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Clears all existing content in the string handle <b><code class="paramname">str</code></b>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>String handle. </td></tr>
   </table>
@@ -409,14 +413,15 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="example_httpuplds_8c-example.html#a12">example_httpuplds.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpuplds_8c-example.html#a12">example_httpuplds.c</a>.</dd>
 </dl>
+
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 1 2019 03:56:23 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 22 2019 03:48:22 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>
