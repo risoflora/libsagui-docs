@@ -28,7 +28,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Sagui library
-   &#160;<span id="projectnumber">v2.5.5</span>
+   &#160;<span id="projectnumber">v3.0.0</span>
    </div>
    <div id="projectbrief">Cross-platform library which helps to develop web servers or frameworks.</div>
   </td>
@@ -175,6 +175,8 @@ Functions</h2></td></tr>
 <tr class="separator:gaa310835d302f833791114df3744f8d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae42aec2203033031d5d7876353643333"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gae42aec2203033031d5d7876353643333">sg_httpupld_save_as</a> (struct <a class="el" href="structsg__httpupld.html">sg_httpupld</a> *upld, const char *path, bool overwritten)</td></tr>
 <tr class="separator:gae42aec2203033031d5d7876353643333"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2559123ed5cf07820a2d425670d8f1bc"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga2559123ed5cf07820a2d425670d8f1bc">sg_httpreq_srv</a> (struct <a class="el" href="structsg__httpreq.html">sg_httpreq</a> *req)</td></tr>
+<tr class="separator:ga2559123ed5cf07820a2d425670d8f1bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga65b50e587a808166b25e086961204766"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsg__strmap.html">sg_strmap</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga65b50e587a808166b25e086961204766">sg_httpreq_headers</a> (struct <a class="el" href="structsg__httpreq.html">sg_httpreq</a> *req)</td></tr>
 <tr class="separator:ga65b50e587a808166b25e086961204766"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9573144c847ffdfdf822ce88006f1e2b"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structsg__strmap.html">sg_strmap</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga9573144c847ffdfdf822ce88006f1e2b">sg_httpreq_cookies</a> (struct <a class="el" href="structsg__httpreq.html">sg_httpreq</a> *req)</td></tr>
@@ -199,6 +201,8 @@ Functions</h2></td></tr>
 <tr class="separator:ga67eda6df2814495982184a49b10044aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaacbbc0c18e2b3b8043b443f2bee02860"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gaacbbc0c18e2b3b8043b443f2bee02860">sg_httpreq_tls_session</a> (struct <a class="el" href="structsg__httpreq.html">sg_httpreq</a> *req)</td></tr>
 <tr class="separator:gaacbbc0c18e2b3b8043b443f2bee02860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga03d1b4d18b602552590efed18655b499"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga03d1b4d18b602552590efed18655b499">sg_httpreq_isolate</a> (struct <a class="el" href="structsg__httpreq.html">sg_httpreq</a> *req, <a class="el" href="group__sg__httpsrv.html#gaaca87e1ea0ab0b2911f1fb5ddefee7af">sg_httpreq_cb</a> cb, void *cls)</td></tr>
+<tr class="separator:ga03d1b4d18b602552590efed18655b499"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga51e5ce38aa517255440cc36f4165af6a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga51e5ce38aa517255440cc36f4165af6a">sg_httpreq_set_user_data</a> (struct <a class="el" href="structsg__httpreq.html">sg_httpreq</a> *req, void *data)</td></tr>
 <tr class="separator:ga51e5ce38aa517255440cc36f4165af6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0fde93ada6f83f34c9228149ffd91381"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga0fde93ada6f83f34c9228149ffd91381">sg_httpreq_user_data</a> (struct <a class="el" href="structsg__httpreq.html">sg_httpreq</a> *req)</td></tr>
@@ -279,6 +283,8 @@ Functions</h2></td></tr>
 <tr class="separator:ga4e66cdc1a1a6b2e9d6880f77d7f5c458"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga66dd01824d5648a7c487e35e5169a877"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga66dd01824d5648a7c487e35e5169a877">sg_httpsrv_con_limit</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv)</td></tr>
 <tr class="separator:ga66dd01824d5648a7c487e35e5169a877"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabe65077f08549ca8d5a6be9f3828615b"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gabe65077f08549ca8d5a6be9f3828615b">sg_httpsrv_handle</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv)</td></tr>
+<tr class="separator:gabe65077f08549ca8d5a6be9f3828615b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <p>Fast event-driven HTTP server. </p>
@@ -339,7 +345,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpauth_8c-example.html#a7">example_httpauth.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a4">example_httpcookie.c</a>, <a class="el" href="example_httpreq_payload_8c-example.html#a4">example_httpreq_payload.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a2">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a2">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpsrv_tls_8c-example.html#a2">example_httpsrv_tls.c</a>, <a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a5">example_httpsrv_tls_cert_auth.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a13">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a4">example_router_srv.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpauth_8c-example.html#a7">example_httpauth.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a4">example_httpcookie.c</a>, <a class="el" href="example_httpreq_isolate_8c-example.html#a2">example_httpreq_isolate.c</a>, <a class="el" href="example_httpreq_payload_8c-example.html#a4">example_httpreq_payload.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a2">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a2">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpsrv_sse_8c-example.html#a10">example_httpsrv_sse.c</a>, <a class="el" href="example_httpsrv_tls_8c-example.html#a2">example_httpsrv_tls.c</a>, <a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a5">example_httpsrv_tls_cert_auth.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a13">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a4">example_router_srv.c</a>.</dd>
 </dl>
 
 </div>
@@ -387,7 +393,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpuplds_8c-example.html#a20">example_httpuplds.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpuplds_8c-example.html#a22">example_httpuplds.c</a>.</dd>
 </dl>
 
 </div>
@@ -608,7 +614,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Callback signature used to handle client events. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Callback signature used to handle client connection events. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">cls</td><td>User-defined closure. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">client</td><td>Socket handle of the client. </td></tr>
@@ -936,7 +942,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Cancels the authentication loop while the user is trying to acess the server. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Cancels the authentication loop while the user is trying to access the server. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">auth</td><td>Authentication handle. </td></tr>
   </table>
@@ -1442,6 +1448,39 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga2559123ed5cf07820a2d425670d8f1bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2559123ed5cf07820a2d425670d8f1bc">&#9670;&nbsp;</a></span>sg_httpreq_srv()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a>* sg_httpreq_srv </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structsg__httpreq.html">sg_httpreq</a> *&#160;</td>
+          <td class="paramname"><em>req</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the server instance. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">req</td><td>Request handle. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the server instance. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">req</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code> </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpuplds_8c-example.html#a21">example_httpuplds.c</a>.</dd>
+</dl>
+
+</div>
+</div>
 <a id="ga65b50e587a808166b25e086961204766"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga65b50e587a808166b25e086961204766">&#9670;&nbsp;</a></span>sg_httpreq_headers()</h2>
 
@@ -1471,7 +1510,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>The headers map is automatically freed by the library. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpcomp_8c-example.html#a3">example_httpcomp.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpcomp_8c-example.html#a3">example_httpcomp.c</a>, and <a class="el" href="example_httpsrv_sse_8c-example.html#a3">example_httpsrv_sse.c</a>.</dd>
 </dl>
 
 </div>
@@ -1666,7 +1705,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpcookie_8c-example.html#a3">example_httpcookie.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a13">example_router_srv.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpcookie_8c-example.html#a3">example_httpcookie.c</a>, <a class="el" href="example_httpreq_isolate_8c-example.html#a3">example_httpreq_isolate.c</a>, <a class="el" href="example_httpsrv_sse_8c-example.html#a9">example_httpsrv_sse.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a13">example_router_srv.c</a>.</dd>
 </dl>
 
 </div>
@@ -1835,6 +1874,62 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ga03d1b4d18b602552590efed18655b499"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga03d1b4d18b602552590efed18655b499">&#9670;&nbsp;</a></span>sg_httpreq_isolate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sg_httpreq_isolate </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structsg__httpreq.html">sg_httpreq</a> *&#160;</td>
+          <td class="paramname"><em>req</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="group__sg__httpsrv.html#gaaca87e1ea0ab0b2911f1fb5ddefee7af">sg_httpreq_cb</a>&#160;</td>
+          <td class="paramname"><em>cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>cls</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Isolates a request from the main event loop to an own dedicated thread, bringing it back when the request finishes. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">req</td><td>Request handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cb</td><td>Callback to handle requests and responses isolated from the main event loop. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cls</td><td>User-defined closure. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">0</td><td>Success. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">ENOMEM</td><td>Out of memory. </td></tr>
+    <tr><td class="paramname">E&lt;ERROR&gt;</td><td>Any returned error from the OS threading library. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Isolated requestes will not time out. </dd>
+<dd>
+While a request is isolated, the library will not detect disconnects by the client. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpreq_isolate_8c-example.html#a4">example_httpreq_isolate.c</a>.</dd>
+</dl>
+
+</div>
+</div>
 <a id="ga51e5ce38aa517255440cc36f4165af6a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga51e5ce38aa517255440cc36f4165af6a">&#9670;&nbsp;</a></span>sg_httpreq_set_user_data()</h2>
 
@@ -1937,6 +2032,8 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>The headers map is automatically freed by the library. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpsrv_sse_8c-example.html#a4">example_httpsrv_sse.c</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -2294,6 +2391,8 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Use <code>size = 0</code> if the stream size is unknown. </dd></dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpsrv_sse_8c-example.html#a8">example_httpsrv_sse.c</a>.</dd>
+</dl>
 
 </div>
 </div>
@@ -2848,6 +2947,7 @@ Functions</h2></td></tr>
   <table class="retval">
     <tr><td class="paramname">NULL</td><td>If no memory space is available. </td></tr>
     <tr><td class="paramname">NULL</td><td>If the <b><code class="paramname">req_cb</code></b> or <b><code class="paramname">err_cb</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If a threading operation fails and sets its error to <code>errno</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -2892,10 +2992,11 @@ Functions</h2></td></tr>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">NULL</td><td>If the <b><code class="paramname">cb</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If a threading operation fails and sets its error to <code>errno</code>. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpcomp_8c-example.html#a8">example_httpcomp.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a9">example_httpcookie.c</a>, <a class="el" href="example_httpreq_payload_8c-example.html#a7">example_httpreq_payload.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a4">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a4">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpsrv_tls_8c-example.html#a4">example_httpsrv_tls.c</a>, <a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a8">example_httpsrv_tls_cert_auth.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a22">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a17">example_router_srv.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpcomp_8c-example.html#a8">example_httpcomp.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a9">example_httpcookie.c</a>, <a class="el" href="example_httpreq_isolate_8c-example.html#a6">example_httpreq_isolate.c</a>, <a class="el" href="example_httpreq_payload_8c-example.html#a7">example_httpreq_payload.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a4">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a4">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpsrv_sse_8c-example.html#a12">example_httpsrv_sse.c</a>, <a class="el" href="example_httpsrv_tls_8c-example.html#a4">example_httpsrv_tls.c</a>, <a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a8">example_httpsrv_tls_cert_auth.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a24">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a17">example_router_srv.c</a>.</dd>
 </dl>
 
 </div>
@@ -2922,7 +3023,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>If the server is running it stops before being freed. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpauth_8c-example.html#a11">example_httpauth.c</a>, <a class="el" href="example_httpcomp_8c-example.html#a10">example_httpcomp.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a11">example_httpcookie.c</a>, <a class="el" href="example_httpreq_payload_8c-example.html#a9">example_httpreq_payload.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a6">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a8">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpsrv_tls_8c-example.html#a6">example_httpsrv_tls.c</a>, <a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a11">example_httpsrv_tls_cert_auth.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a24">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a19">example_router_srv.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpauth_8c-example.html#a11">example_httpauth.c</a>, <a class="el" href="example_httpcomp_8c-example.html#a10">example_httpcomp.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a11">example_httpcookie.c</a>, <a class="el" href="example_httpreq_isolate_8c-example.html#a8">example_httpreq_isolate.c</a>, <a class="el" href="example_httpreq_payload_8c-example.html#a9">example_httpreq_payload.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a6">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a8">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpsrv_sse_8c-example.html#a14">example_httpsrv_sse.c</a>, <a class="el" href="example_httpsrv_tls_8c-example.html#a6">example_httpsrv_tls.c</a>, <a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a11">example_httpsrv_tls_cert_auth.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a26">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a19">example_router_srv.c</a>.</dd>
 </dl>
 
 </div>
@@ -3124,7 +3225,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>If port is <code>0</code>, the operating system will assign randomly an unused port. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpauth_8c-example.html#a10">example_httpauth.c</a>, <a class="el" href="example_httpcomp_8c-example.html#a9">example_httpcomp.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a10">example_httpcookie.c</a>, <a class="el" href="example_httpreq_payload_8c-example.html#a8">example_httpreq_payload.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a5">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a7">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a23">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a18">example_router_srv.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpauth_8c-example.html#a10">example_httpauth.c</a>, <a class="el" href="example_httpcomp_8c-example.html#a9">example_httpcomp.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a10">example_httpcookie.c</a>, <a class="el" href="example_httpreq_isolate_8c-example.html#a7">example_httpreq_isolate.c</a>, <a class="el" href="example_httpreq_payload_8c-example.html#a8">example_httpreq_payload.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a5">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a7">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpsrv_sse_8c-example.html#a13">example_httpsrv_sse.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a25">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a18">example_router_srv.c</a>.</dd>
 </dl>
 
 </div>
@@ -3152,11 +3253,12 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">0</td><td>If the server is stopped. If <b><code class="paramname">srv</code></b> is null, sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">0</td><td>If the server is stopped. </td></tr>
+    <tr><td class="paramname">EINVAL</td><td>Invalid argument. </td></tr>
+    <tr><td class="paramname">EALREADY</td><td>Already shut down. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>When <a class="el" href="group__sg__httpsrv.html#gade49a74a62dfcdf9deb51082113f7689">sg_httpsrv_set_con_timeout()</a> is set, the server waits for the clients to be closed before shutting down. </dd></dl>
 
 </div>
 </div>
@@ -3182,7 +3284,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Server listening port, <code>0</code> otherwise. If <b><code class="paramname">srv</code></b> is null, sets the <code>errno</code> to <code>EINVAL</code>. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpauth_8c-example.html#a12">example_httpauth.c</a>, <a class="el" href="example_httpcomp_8c-example.html#a11">example_httpcomp.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a12">example_httpcookie.c</a>, <a class="el" href="example_httpreq_payload_8c-example.html#a10">example_httpreq_payload.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a7">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a9">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpsrv_tls_8c-example.html#a7">example_httpsrv_tls.c</a>, <a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a10">example_httpsrv_tls_cert_auth.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a25">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a20">example_router_srv.c</a>.</dd>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpauth_8c-example.html#a12">example_httpauth.c</a>, <a class="el" href="example_httpcomp_8c-example.html#a11">example_httpcomp.c</a>, <a class="el" href="example_httpcookie_8c-example.html#a12">example_httpcookie.c</a>, <a class="el" href="example_httpreq_isolate_8c-example.html#a9">example_httpreq_isolate.c</a>, <a class="el" href="example_httpreq_payload_8c-example.html#a10">example_httpreq_payload.c</a>, <a class="el" href="example_httpsrv_8c-example.html#a7">example_httpsrv.c</a>, <a class="el" href="example_httpsrv_benchmark_8c-example.html#a9">example_httpsrv_benchmark.c</a>, <a class="el" href="example_httpsrv_sse_8c-example.html#a15">example_httpsrv_sse.c</a>, <a class="el" href="example_httpsrv_tls_8c-example.html#a7">example_httpsrv_tls.c</a>, <a class="el" href="example_httpsrv_tls_cert_auth_8c-example.html#a10">example_httpsrv_tls_cert_auth.c</a>, <a class="el" href="example_httpuplds_8c-example.html#a27">example_httpuplds.c</a>, and <a class="el" href="example_router_srv_8c-example.html#a20">example_router_srv.c</a>.</dd>
 </dl>
 
 </div>
@@ -3248,7 +3350,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Sets the server callback for client events. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Sets the server callback for client connection events. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">srv</td><td>Server handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">cb</td><td>Callback to handle client events. </td></tr>
@@ -3412,6 +3514,8 @@ Functions</h2></td></tr>
     <tr><td class="paramname">NULL</td><td>If the <b><code class="paramname">srv</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
+</dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="example_httpuplds_8c-example.html#a20">example_httpuplds.c</a>.</dd>
 </dl>
 
 </div>
@@ -3858,10 +3962,43 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="gabe65077f08549ca8d5a6be9f3828615b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabe65077f08549ca8d5a6be9f3828615b">&#9670;&nbsp;</a></span>sg_httpsrv_handle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* sg_httpsrv_handle </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *&#160;</td>
+          <td class="paramname"><em>srv</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns the MHD instance. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">srv</td><td>Server handle. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>MHD instance. </dd>
+<dd>
+NULL If the server is shut down. </dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">srv</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 20 2020 00:23:56 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri May 1 2020 14:17:39 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.15
 </small></address>
