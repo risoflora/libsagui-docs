@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['string',['String',['../group__sg__str.html',1,'']]],
-  ['string_20map',['String map',['../group__sg__strmap.html',1,'']]]
+  ['path_20routing_468',['Path routing',['../group__sg__routing.html',1,'']]]
 ];
