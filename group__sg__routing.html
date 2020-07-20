@@ -28,7 +28,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Sagui library
-   &#160;<span id="projectnumber">v3.1.0</span>
+   &#160;<span id="projectnumber">v3.1.3</span>
    </div>
    <div id="projectbrief">Cross-platform library which helps to develop web servers or frameworks.</div>
   </td>
@@ -337,7 +337,7 @@ Functions</h2></td></tr>
 <p>Callback signature used by <a class="el" href="group__sg__routing.html#gad23ee5eaba8df56b38ac7a384798ee87">sg_router_dispatch2</a> in the route dispatching loop. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">cls</td><td>User-defined closure. </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">path</td><td>Route path as null-terminated string. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">path</td><td>Route path as a null-terminated string. </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">route</td><td>Route handle. </td></tr>
   </table>
   </dd>
@@ -402,10 +402,10 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Entry-point name as null-terminated string. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Entry-point name as a null-terminated string. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If the <b><code class="paramname">entrypoint</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If the <b><code class="paramname">entrypoint</code></b> is null and set the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -478,7 +478,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>User data pointer. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">entrypoint</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">entrypoint</code></b> is null and set the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -795,7 +795,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>PCRE2 handle containing the compiled regex code. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">route</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">route</code></b> is null and set the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -826,7 +826,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>PCRE2 match data. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">route</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">route</code></b> is null and set the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -854,10 +854,10 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Raw pattern as null-terminated string. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Raw pattern as a null-terminated string. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">route</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">route</code></b> is null and set the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -885,12 +885,12 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Pattern as null-terminated string. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Pattern as a null-terminated string. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">NULL</td><td><ul>
-<li>If <b><code class="paramname">route</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>.</li>
-<li>If no memory space is available and sets the <code>errno</code> to <code>ENOMEM</code>. </li>
+<li>If <b><code class="paramname">route</code></b> is null and set the <code>errno</code> to <code>EINVAL</code>.</li>
+<li>If no memory space is available and set the <code>errno</code> to <code>ENOMEM</code>. </li>
 </ul>
 </td></tr>
   </table>
@@ -921,10 +921,10 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Path component as null-terminated string. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Path component as a null-terminated string. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">route</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">route</code></b> is null and set the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1062,7 +1062,7 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>User data pointer. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">route</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If <b><code class="paramname">route</code></b> is null and set the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1130,7 +1130,7 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">routes</td><td>Route list pointer to add a new route item. </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">route</td><td>Pointer of the variable to store the added route reference. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pattern</td><td>Pattern as null-terminated string. It must be a valid regular expression in PCRE2 syntax. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pattern</td><td>Pattern as a null-terminated string. It must be a valid regular expression in PCRE2 syntax. </td></tr>
     <tr><td class="paramdir">[in,out]</td><td class="paramname">errmsg</td><td>Pointer of a string to store the error message. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">errlen</td><td>Length of the error message. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">cb</td><td>Callback to handle the path routing. </td></tr>
@@ -1195,7 +1195,7 @@ The pattern is compiled using just-in-time optimization (JIT) when it is support
 <p>Adds a route item to the route list <b><code class="paramname">routes</code></b>. It uses the <code>stderr</code> to print the validation errors. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">routes</td><td>Route list pointer to add a new route item. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pattern</td><td>Pattern as null-terminated string. It must be a valid regular expression in PCRE2 syntax. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pattern</td><td>Pattern as a null-terminated string. It must be a valid regular expression in PCRE2 syntax. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">cb</td><td>Callback to handle the path routing. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">cls</td><td>User-defined closure. </td></tr>
   </table>
@@ -1248,7 +1248,7 @@ The pattern is compiled using just-in-time optimization (JIT) when it is support
 <p>Removes a route item from the route list <b><code class="paramname">routes</code></b>. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">routes</td><td>Route list pointer to add a new route item. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">pattern</td><td>Pattern as null-terminated string of the route to be removed. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pattern</td><td>Pattern as a null-terminated string of the route to be removed. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1328,7 +1328,7 @@ The pattern is compiled using just-in-time optimization (JIT) when it is support
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the next route int the route list. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Returns the next route into the route list. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in,out]</td><td class="paramname">route</td><td>Pointer to the next route item. </td></tr>
   </table>
@@ -1425,7 +1425,7 @@ The pattern is compiled using just-in-time optimization (JIT) when it is support
 <dl class="section return"><dt>Returns</dt><dd>New router handle. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If the <b><code class="paramname">routes</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code> or no memory space. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If the <b><code class="paramname">routes</code></b> is null and set the <code>errno</code> to <code>EINVAL</code> or no memory space. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1513,7 +1513,7 @@ The pattern is compiled using just-in-time optimization (JIT) when it is support
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">router</td><td>Router handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to dispatch a route. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>User data pointer to be hold by the route. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>User data pointer to be held by the route. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">dispatch_cb</td><td>Callback triggered for each route item in the route dispatching loop. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">cls</td><td>User-defined closure passed to the <b><code class="paramname">dispatch_cb</code></b> and <b><code class="paramname">match_cb</code></b> callbacks. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">match_cb</td><td>Callback triggered when the path matches the route pattern. </td></tr>
@@ -1570,7 +1570,7 @@ The match logic uses just-in-time optimization (JIT) when it is supported. </dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">router</td><td>Router handle. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>Path to dispatch a route. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>User data pointer to be hold by the route. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">user_data</td><td>User data pointer to be held by the route. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1594,7 +1594,7 @@ The match logic uses just-in-time optimization (JIT) when it is supported. </dd>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 11 2020 02:32:46 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jul 20 2020 05:09:10 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

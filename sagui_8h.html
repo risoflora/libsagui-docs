@@ -28,7 +28,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Sagui library
-   &#160;<span id="projectnumber">v3.1.0</span>
+   &#160;<span id="projectnumber">v3.1.3</span>
    </div>
    <div id="projectbrief">Cross-platform library which helps to develop web servers or frameworks.</div>
   </td>
@@ -125,16 +125,16 @@ Macros</h2></td></tr>
 <tr class="separator:a05b92ec408039700f4786871eac486df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae64c67ed9caee0189cf4fd669a869255"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gae64c67ed9caee0189cf4fd669a869255">sg_httpres_send</a>(res,  val,  content_type,  status)</td></tr>
 <tr class="separator:gae64c67ed9caee0189cf4fd669a869255"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga06ece83b9ccba09faf4a0f94a8ae312f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga06ece83b9ccba09faf4a0f94a8ae312f">sg_httpres_download</a>(res,  filename)&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#ga77c97b57d5aabd594da5cda6957eb416">sg_httpres_sendfile2</a>((res), 0, 0, 0, (filename), &quot;attachment&quot;, 200)</td></tr>
-<tr class="separator:ga06ece83b9ccba09faf4a0f94a8ae312f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga056959fd26689cd05f8255b75de30817"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga056959fd26689cd05f8255b75de30817">sg_httpres_render</a>(res,  filename)&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#ga77c97b57d5aabd594da5cda6957eb416">sg_httpres_sendfile2</a>((res), 0, 0, 0, (filename), &quot;inline&quot;, 200)</td></tr>
-<tr class="separator:ga056959fd26689cd05f8255b75de30817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadef83291f2c1c09b30904dda92c5c7e2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gadef83291f2c1c09b30904dda92c5c7e2">sg_httpres_download</a>(res,  filename,  status)&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#ga77c97b57d5aabd594da5cda6957eb416">sg_httpres_sendfile2</a>((res), 0, 0, 0, (filename), &quot;attachment&quot;, (status))</td></tr>
+<tr class="separator:gadef83291f2c1c09b30904dda92c5c7e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3abefbca281842cf96b88ba6675dfa29"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga3abefbca281842cf96b88ba6675dfa29">sg_httpres_render</a>(res,  filename,  status)&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#ga77c97b57d5aabd594da5cda6957eb416">sg_httpres_sendfile2</a>((res), 0, 0, 0, (filename), &quot;inline&quot;, (status))</td></tr>
+<tr class="separator:ga3abefbca281842cf96b88ba6675dfa29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae3596317f8cf6683140d445240b7792c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gae3596317f8cf6683140d445240b7792c">sg_httpres_zsend</a>(res,  val,  content_type,  status)</td></tr>
 <tr class="separator:gae3596317f8cf6683140d445240b7792c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae2e2eda661bf2868503f3799506287f8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gae2e2eda661bf2868503f3799506287f8">sg_httpres_zdownload</a>(res,  filename)&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#gaf1af6a4ba7a05e73c71ce9e82c4aae9a">sg_httpres_zsendfile2</a>((res), 1, 0, 0, 0, (filename), &quot;attachment&quot;, 200)</td></tr>
-<tr class="separator:gae2e2eda661bf2868503f3799506287f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6f809862a7922804306e9ba49328c528"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga6f809862a7922804306e9ba49328c528">sg_httpres_zrender</a>(res,  filename)&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#gaf1af6a4ba7a05e73c71ce9e82c4aae9a">sg_httpres_zsendfile2</a>((res), 1, 0, 0, 0, (filename), &quot;inline&quot;, 200)</td></tr>
-<tr class="separator:ga6f809862a7922804306e9ba49328c528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga083dd7aa930527f9ecaf4a17dc821921"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga083dd7aa930527f9ecaf4a17dc821921">sg_httpres_zdownload</a>(res,  filename,  status)&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#gaf1af6a4ba7a05e73c71ce9e82c4aae9a">sg_httpres_zsendfile2</a>((res), 1, 0, 0, 0, (filename), &quot;attachment&quot;, (status))</td></tr>
+<tr class="separator:ga083dd7aa930527f9ecaf4a17dc821921"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2386dcbf732253155cd0ac246cb5a118"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga2386dcbf732253155cd0ac246cb5a118">sg_httpres_zrender</a>(res,  filename,  status)&#160;&#160;&#160;<a class="el" href="group__sg__httpsrv.html#gaf1af6a4ba7a05e73c71ce9e82c4aae9a">sg_httpres_zsendfile2</a>((res), 1, 0, 0, 0, (filename), &quot;inline&quot;, (status))</td></tr>
+<tr class="separator:ga2386dcbf732253155cd0ac246cb5a118"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -531,7 +531,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 11 2020 02:32:46 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jul 20 2020 05:09:10 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

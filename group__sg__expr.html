@@ -28,7 +28,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Sagui library
-   &#160;<span id="projectnumber">v3.1.0</span>
+   &#160;<span id="projectnumber">v3.1.3</span>
    </div>
    <div id="projectbrief">Cross-platform library which helps to develop web servers or frameworks.</div>
   </td>
@@ -246,7 +246,7 @@ Functions</h2></td></tr>
 <p>Creates a new mathematical expression evaluator handle. </p><dl class="section return"><dt>Returns</dt><dd>New mathematical expression evaluator handle. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If no memory space is available and sets the <code>errno</code> to <code>ENOMEM</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If no memory space is available and set the <code>errno</code> to <code>ENOMEM</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -321,8 +321,8 @@ Functions</h2></td></tr>
 <p>Compiles a mathematical expression allowing to declare variables, macros and extensions. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">expr</td><td>Mathematical expression instance. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>Null-terminated string with the mathematical expresion to be compiled. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>Length of the mathematical expresion to be compiled. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>Null-terminated string with the mathematical expression to be compiled. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>Length of the mathematical expression to be compiled. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">extensions</td><td>Array of extensions to extend the evaluator. </td></tr>
   </table>
   </dd>
@@ -358,7 +358,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Clears a mathematical expresion instance. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Clears a mathematical expression instance. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">expr</td><td>Mathematical expression instance. </td></tr>
   </table>
@@ -391,14 +391,14 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Evaluates a compiled mathematical expression. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">expr</td><td>Compiled mathematical expresion. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">expr</td><td>Compiled mathematical expression. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Floating-point value of the evaluated mathematical expresion. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Floating-point value of the evaluated mathematical expression. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NAN</td><td>If the <b><code class="paramname">expr</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NAN</td><td>If the <b><code class="paramname">expr</code></b> is null and set the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -449,8 +449,8 @@ Functions</h2></td></tr>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">NAN</td><td><ul>
-<li>If <b><code class="paramname">expr</code></b> or <b><code class="paramname">name</code></b> is null, or <b><code class="paramname">len</code></b> is less than one, and sets the <code>errno</code> to <code>EINVAL</code>.</li>
-<li>If no memory space is available and sets the <code>errno</code> to <code>ENOMEM</code>. </li>
+<li>If <b><code class="paramname">expr</code></b> or <b><code class="paramname">name</code></b> is null, or <b><code class="paramname">len</code></b> is less than one, and set the <code>errno</code> to <code>EINVAL</code>.</li>
+<li>If no memory space is available and set the <code>errno</code> to <code>ENOMEM</code>. </li>
 </ul>
 </td></tr>
   </table>
@@ -541,7 +541,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Gets function argument by its index. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Gets a function argument by its index. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">args</td><td>Arguments list. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">index</td><td>Argument index. </td></tr>
@@ -550,7 +550,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NAN</td><td>If the <b><code class="paramname">args</code></b> is null or <b><code class="paramname">index</code></b> is less than zero and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NAN</td><td>If the <b><code class="paramname">args</code></b> is null or <b><code class="paramname">index</code></b> is less than zero and set the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -576,7 +576,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns the nearby position of an error in the mathematical expression. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">expr</td><td>Compiled mathematical expresion. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">expr</td><td>Compiled mathematical expression. </td></tr>
   </table>
   </dd>
 </dl>
@@ -609,14 +609,14 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns the type of an error in the mathematical expression. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">expr</td><td>Compiled mathematical expresion. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">expr</td><td>Compiled mathematical expression. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Enumerator representing the error type. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">SG_EXPR_ERR_UNKNOWN</td><td>If the <b><code class="paramname">expr</code></b> is null or an unknown error occurred and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">SG_EXPR_ERR_UNKNOWN</td><td>If the <b><code class="paramname">expr</code></b> is null or an unknown error occurred and set the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -640,14 +640,14 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Returns the description of an error in the mathematical expression. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">expr</td><td>Compiled mathematical expresion. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">expr</td><td>Compiled mathematical expression. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Description of the error as null-terminated string. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Description of the error as a null-terminated string. </dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NULL</td><td>If the <b><code class="paramname">expr</code></b> is null and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NULL</td><td>If the <b><code class="paramname">expr</code></b> is null and set the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -681,16 +681,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns the evaluated value of a mathematical expresion. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Returns the evaluated value of a mathematical expression. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>Null-terminated string with the mathematical expresion to be evaluated. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>Length of the mathematical expresion to be evaluated. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">str</td><td>Null-terminated string with the mathematical expression to be evaluated. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>Length of the mathematical expression to be evaluated. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">NAN</td><td>If <b><code class="paramname">str</code></b> is null, or <b><code class="paramname">len</code></b> is less than one, and sets the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+    <tr><td class="paramname">NAN</td><td>If <b><code class="paramname">str</code></b> is null, or <b><code class="paramname">len</code></b> is less than one, and set the <code>errno</code> to <code>EINVAL</code>. </td></tr>
   </table>
   </dd>
 </dl>
@@ -702,7 +702,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 11 2020 02:32:46 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jul 20 2020 05:09:10 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

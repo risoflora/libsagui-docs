@@ -28,7 +28,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Sagui library
-   &#160;<span id="projectnumber">v3.1.0</span>
+   &#160;<span id="projectnumber">v3.1.3</span>
    </div>
    <div id="projectbrief">Cross-platform library which helps to develop web servers or frameworks.</div>
   </td>
@@ -201,7 +201,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">      <span class="keywordflow">if</span> (file) {</div>
 <div class="line">        sprintf(path, <span class="stringliteral">&quot;%s%c%s&quot;</span>, <a name="a20"></a><a class="code" href="group__sg__httpsrv.html#ga879b0b4be65515dc71a8d806842c8d18">sg_httpsrv_upld_dir</a>(<a name="a21"></a><a class="code" href="group__sg__httpsrv.html#ga2559123ed5cf07820a2d425670d8f1bc">sg_httpreq_srv</a>(req)),</div>
 <div class="line">                PATH_SEP, file);</div>
-<div class="line">        <a name="a22"></a><a class="code" href="group__sg__httpsrv.html#ga06ece83b9ccba09faf4a0f94a8ae312f">sg_httpres_download</a>(res, path);</div>
+<div class="line">        <a name="a22"></a><a class="code" href="group__sg__httpsrv.html#gadef83291f2c1c09b30904dda92c5c7e2">sg_httpres_download</a>(res, path, 200);</div>
 <div class="line">      }</div>
 <div class="line">    } <span class="keywordflow">else</span></div>
 <div class="line">      <a class="code" href="group__sg__httpsrv.html#gae64c67ed9caee0189cf4fd669a869255">sg_httpres_send</a>(res, PAGE_FORM, CONTENT_TYPE, 200);</div>
@@ -235,13 +235,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="astructsg__httpsrv_html"><div class="ttname"><a href="structsg__httpsrv.html">sg_httpsrv</a></div><div class="ttdef"><b>Definition:</b> sagui.h:604</div></div>
 <div class="ttc" id="astructsg__str_html"><div class="ttname"><a href="structsg__str.html">sg_str</a></div></div>
 <div class="ttc" id="agroup__sg__httpsrv_html_ga56a6469371909b36270f0e877fbc69a8"><div class="ttname"><a href="group__sg__httpsrv.html#ga56a6469371909b36270f0e877fbc69a8">sg_httpsrv_new</a></div><div class="ttdeci">struct sg_httpsrv * sg_httpsrv_new(sg_httpreq_cb cb, void *cls) __attribute__((malloc))</div></div>
+<div class="ttc" id="agroup__sg__httpsrv_html_gadef83291f2c1c09b30904dda92c5c7e2"><div class="ttname"><a href="group__sg__httpsrv.html#gadef83291f2c1c09b30904dda92c5c7e2">sg_httpres_download</a></div><div class="ttdeci">#define sg_httpres_download(res, filename, status)</div><div class="ttdef"><b>Definition:</b> sagui.h:1065</div></div>
 <div class="ttc" id="asagui_8h_html"><div class="ttname"><a href="sagui_8h.html">sagui.h</a></div></div>
 <div class="ttc" id="agroup__sg__httpsrv_html_gafdc2bab56e952bd8395f2ebfd91469f5"><div class="ttname"><a href="group__sg__httpsrv.html#gafdc2bab56e952bd8395f2ebfd91469f5">sg_httpsrv_port</a></div><div class="ttdeci">uint16_t sg_httpsrv_port(struct sg_httpsrv *srv)</div></div>
 <div class="ttc" id="agroup__sg__httpsrv_html_gaa310835d302f833791114df3744f8d38"><div class="ttname"><a href="group__sg__httpsrv.html#gaa310835d302f833791114df3744f8d38">sg_httpupld_save</a></div><div class="ttdeci">int sg_httpupld_save(struct sg_httpupld *upld, bool overwritten)</div></div>
 <div class="ttc" id="agroup__sg__httpsrv_html_gae64c67ed9caee0189cf4fd669a869255"><div class="ttname"><a href="group__sg__httpsrv.html#gae64c67ed9caee0189cf4fd669a869255">sg_httpres_send</a></div><div class="ttdeci">#define sg_httpres_send(res, val, content_type, status)</div><div class="ttdef"><b>Definition:</b> sagui.h:1032</div></div>
 <div class="ttc" id="agroup__sg__str_html_ga2ed5949c6c8e3baff32c6231600b074d"><div class="ttname"><a href="group__sg__str.html#ga2ed5949c6c8e3baff32c6231600b074d">sg_str_new</a></div><div class="ttdeci">struct sg_str * sg_str_new(void) __attribute__((malloc))</div></div>
 <div class="ttc" id="agroup__sg__httpsrv_html_ga879b0b4be65515dc71a8d806842c8d18"><div class="ttname"><a href="group__sg__httpsrv.html#ga879b0b4be65515dc71a8d806842c8d18">sg_httpsrv_upld_dir</a></div><div class="ttdeci">const char * sg_httpsrv_upld_dir(struct sg_httpsrv *srv)</div></div>
-<div class="ttc" id="agroup__sg__httpsrv_html_ga06ece83b9ccba09faf4a0f94a8ae312f"><div class="ttname"><a href="group__sg__httpsrv.html#ga06ece83b9ccba09faf4a0f94a8ae312f">sg_httpres_download</a></div><div class="ttdeci">#define sg_httpres_download(res, filename)</div><div class="ttdef"><b>Definition:</b> sagui.h:1064</div></div>
 <div class="ttc" id="astructsg__httpupld_html"><div class="ttname"><a href="structsg__httpupld.html">sg_httpupld</a></div><div class="ttdef"><b>Definition:</b> sagui.h:583</div></div>
 <div class="ttc" id="agroup__sg__str_html_ga420406c7f2760983588eaa39d0f678a9"><div class="ttname"><a href="group__sg__str.html#ga420406c7f2760983588eaa39d0f678a9">sg_str_content</a></div><div class="ttdeci">int const char * sg_str_content(struct sg_str *str)</div></div>
 <div class="ttc" id="agroup__sg__utils_html_ga9e97bf43a8b4fc583191d37b0faa633e"><div class="ttname"><a href="group__sg__utils.html#ga9e97bf43a8b4fc583191d37b0faa633e">sg_strerror</a></div><div class="ttdeci">char * sg_strerror(int errnum, char *errmsg, size_t errlen)</div></div>
@@ -260,7 +260,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="agroup__sg__strmap_html_ga89143d04b1ddddf0dfa52d5309122848"><div class="ttname"><a href="group__sg__strmap.html#ga89143d04b1ddddf0dfa52d5309122848">sg_strmap_count</a></div><div class="ttdeci">unsigned int sg_strmap_count(struct sg_strmap *map)</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jun 11 2020 02:32:46 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jul 20 2020 05:09:09 for Sagui library by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
