@@ -28,7 +28,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Sagui library
-   &#160;<span id="projectnumber">v3.3.4</span>
+   &#160;<span id="projectnumber">v3.4.0</span>
    </div>
    <div id="projectbrief">Cross-platform library which helps to develop web servers or frameworks.</div>
   </td>
@@ -243,6 +243,8 @@ Functions</h2></td></tr>
 <tr class="separator:ga56a6469371909b36270f0e877fbc69a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac377679c831c0b428ee80b2f63174bf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gac377679c831c0b428ee80b2f63174bf8">sg_httpsrv_free</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv)</td></tr>
 <tr class="separator:gac377679c831c0b428ee80b2f63174bf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga47391c6bc844f7ba6ceb6a9eb072725b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga47391c6bc844f7ba6ceb6a9eb072725b">sg_httpsrv_tls_listen3</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv, const char *key, const char *pwd, const char *cert, const char *trust, const char *dhparams, const char *priorities, uint16_t port, bool threaded)</td></tr>
+<tr class="separator:ga47391c6bc844f7ba6ceb6a9eb072725b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1edeaed3fccc4edf0fee5a0b71aa6e45"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga1edeaed3fccc4edf0fee5a0b71aa6e45">sg_httpsrv_tls_listen2</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv, const char *key, const char *pwd, const char *cert, const char *trust, const char *dhparams, uint16_t port, bool threaded)</td></tr>
 <tr class="separator:ga1edeaed3fccc4edf0fee5a0b71aa6e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8b31dc74e058ab7f821797f64d9bbdc7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga8b31dc74e058ab7f821797f64d9bbdc7">sg_httpsrv_tls_listen</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv, const char *key, const char *cert, uint16_t port, bool threaded)</td></tr>
@@ -3133,6 +3135,97 @@ While a request is isolated, the library will not detect disconnects by the clie
 
 </div>
 </div>
+<a id="ga47391c6bc844f7ba6ceb6a9eb072725b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga47391c6bc844f7ba6ceb6a9eb072725b">&#9670;&nbsp;</a></span>sg_httpsrv_tls_listen3()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool sg_httpsrv_tls_listen3 </td>
+          <td>(</td>
+          <td class="paramtype">struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *&#160;</td>
+          <td class="paramname"><em>srv</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pwd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>cert</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>trust</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>dhparams</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>priorities</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>threaded</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Starts the HTTPS server. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">srv</td><td>Server handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>Memory pointer for the private key (key.pem) to be used by the HTTPS server. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pwd</td><td>Password for the private key. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cert</td><td>Memory pointer for the certificate (cert.pem) to be used by the HTTPS server. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">trust</td><td>Memory pointer for the certificate (ca.pem) to be used by the HTTPS server for client authentication. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">dhparams</td><td>Memory pointer for the Diffie Hellman parameters (dh.pem) to be used by the HTTPS server for key exchange. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">priorities</td><td>Memory pointer specifying the cipher algorithm. Default: <code>"NORMAL"</code>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">port</td><td>Port for listening to connections. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">threaded</td><td>Enables/disables the threaded mode. If <code>true</code>, the server creates one thread per connection. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>If the server is started, <code>false</code> otherwise. If <b><code class="paramname">srv</code></b> is null, set the <code>errno</code> to <code>EINVAL</code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>If port is <code>0</code>, the operating system will assign an unused port randomly. </dd></dl>
+
+</div>
+</div>
 <a id="ga1edeaed3fccc4edf0fee5a0b71aa6e45"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga1edeaed3fccc4edf0fee5a0b71aa6e45">&#9670;&nbsp;</a></span>sg_httpsrv_tls_listen2()</h2>
 
@@ -4105,7 +4198,7 @@ NULL If the server is shut down. </dd></dl>
 <div class="ttc" id="agroup__sg__httpsrv_html_ga9da0e0278135544ce709a242e3f34a52"><div class="ttname"><a href="group__sg__httpsrv.html#ga9da0e0278135544ce709a242e3f34a52">sg_httpres_zsendbinary</a></div><div class="ttdeci">int sg_httpres_zsendbinary(struct sg_httpres *res, void *buf, size_t size, const char *content_type, unsigned int status)</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Oct 24 2021 22:05:39 for Sagui library by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Generated on Mon Dec 20 2021 01:07:17 for Sagui library by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>
