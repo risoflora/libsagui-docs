@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Sagui library<span id="projectnumber">&#160;v3.4.4</span>
+   <div id="projectname">Sagui library<span id="projectnumber">&#160;v3.5.0</span>
    </div>
    <div id="projectbrief">Cross-platform library which helps to develop web servers or frameworks.</div>
   </td>
@@ -390,12 +390,16 @@ Functions</h2></td></tr>
 <tr class="separator:ga56b59921f35e8fac91c48ddb0669b5d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac377679c831c0b428ee80b2f63174bf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gac377679c831c0b428ee80b2f63174bf8">sg_httpsrv_free</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv)</td></tr>
 <tr class="separator:gac377679c831c0b428ee80b2f63174bf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0a2c3830033c2012d5cc937a6ca2d3c9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga0a2c3830033c2012d5cc937a6ca2d3c9">sg_httpsrv_tls_listen4</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv, const char *key, const char *pwd, const char *cert, const char *trust, const char *dhparams, const char *priorities, const char *hostname, uint16_t port, uint32_t backlog, bool threaded)</td></tr>
+<tr class="separator:ga0a2c3830033c2012d5cc937a6ca2d3c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga47391c6bc844f7ba6ceb6a9eb072725b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga47391c6bc844f7ba6ceb6a9eb072725b">sg_httpsrv_tls_listen3</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv, const char *key, const char *pwd, const char *cert, const char *trust, const char *dhparams, const char *priorities, uint16_t port, bool threaded)</td></tr>
 <tr class="separator:ga47391c6bc844f7ba6ceb6a9eb072725b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1edeaed3fccc4edf0fee5a0b71aa6e45"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga1edeaed3fccc4edf0fee5a0b71aa6e45">sg_httpsrv_tls_listen2</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv, const char *key, const char *pwd, const char *cert, const char *trust, const char *dhparams, uint16_t port, bool threaded)</td></tr>
 <tr class="separator:ga1edeaed3fccc4edf0fee5a0b71aa6e45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga8b31dc74e058ab7f821797f64d9bbdc7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga8b31dc74e058ab7f821797f64d9bbdc7">sg_httpsrv_tls_listen</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv, const char *key, const char *cert, uint16_t port, bool threaded)</td></tr>
 <tr class="separator:ga8b31dc74e058ab7f821797f64d9bbdc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga222d4ba45329a2f50c49c2e1a39b01e7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga222d4ba45329a2f50c49c2e1a39b01e7">sg_httpsrv_listen2</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv, const char *hostname, uint16_t port, uint32_t backlog, bool threaded)</td></tr>
+<tr class="separator:ga222d4ba45329a2f50c49c2e1a39b01e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gafa768c07cdd78f78c14a5daaafd4c20a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#gafa768c07cdd78f78c14a5daaafd4c20a">sg_httpsrv_listen</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv, uint16_t port, bool threaded)</td></tr>
 <tr class="separator:gafa768c07cdd78f78c14a5daaafd4c20a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga751752009ac77cc76c84fe216a1c76f2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__sg__httpsrv.html#ga751752009ac77cc76c84fe216a1c76f2">sg_httpsrv_shutdown</a> (struct <a class="el" href="structsg__httpsrv.html">sg_httpsrv</a> *srv)</td></tr>
@@ -539,7 +543,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 10 2024 18:09:37 for Sagui library by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+Generated on Wed Feb 14 2024 15:11:38 for Sagui library by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
 </small></address>
 </body>
 </html>

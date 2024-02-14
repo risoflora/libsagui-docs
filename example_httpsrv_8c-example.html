@@ -27,7 +27,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Sagui library<span id="projectnumber">&#160;v3.4.4</span>
+   <div id="projectname">Sagui library<span id="projectnumber">&#160;v3.5.0</span>
    </div>
    <div id="projectbrief">Cross-platform library which helps to develop web servers or frameworks.</div>
   </td>
@@ -120,9 +120,17 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line"><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;unistd.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;signal.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;<a class="code" href="sagui_8h.html">sagui.h</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="comment">/* NOTE: Error checking has been omitted to make it clear. */</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">bool</span> terminated = <span class="keyword">false</span>;</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> sig_handler(__SG_UNUSED <span class="keywordtype">int</span> signum) {</div>
+<div class="line">  terminated = <span class="keyword">true</span>;</div>
+<div class="line">}</div>
 <div class="line"> </div>
 <div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> req_cb(__SG_UNUSED <span class="keywordtype">void</span> *cls, __SG_UNUSED <span class="keyword">struct</span> <a id="_a0" name="_a0"></a><a class="code hl_struct" href="structsg__httpreq.html">sg_httpreq</a> *req,</div>
 <div class="line">                   <span class="keyword">struct</span> <a id="_a1" name="_a1"></a><a class="code hl_struct" href="structsg__httpres.html">sg_httpres</a> *res) {</div>
@@ -139,6 +147,8 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line">    printf(<span class="stringliteral">&quot;%s &lt;PORT&gt;\n&quot;</span>, argv[0]);</div>
 <div class="line">    <span class="keywordflow">return</span> EXIT_FAILURE;</div>
 <div class="line">  }</div>
+<div class="line">  signal(SIGTERM, sig_handler);</div>
+<div class="line">  signal(SIGINT, sig_handler);</div>
 <div class="line">  port = strtol(argv[1], NULL, 10);</div>
 <div class="line">  srv = <a id="a4" name="a4"></a><a class="code hl_function" href="group__sg__httpsrv.html#ga56b59921f35e8fac91c48ddb0669b5d1">sg_httpsrv_new</a>(req_cb, NULL);</div>
 <div class="line">  <span class="keywordflow">if</span> (!<a id="a5" name="a5"></a><a class="code hl_function" href="group__sg__httpsrv.html#gafa768c07cdd78f78c14a5daaafd4c20a">sg_httpsrv_listen</a>(srv, port, <span class="keyword">false</span>)) {</div>
@@ -148,7 +158,9 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 <div class="line">  fprintf(stdout, <span class="stringliteral">&quot;Server running at http://localhost:%d\n&quot;</span>,</div>
 <div class="line">          <a id="a7" name="a7"></a><a class="code hl_function" href="group__sg__httpsrv.html#gafdc2bab56e952bd8395f2ebfd91469f5">sg_httpsrv_port</a>(srv));</div>
 <div class="line">  fflush(stdout);</div>
-<div class="line">  getchar();</div>
+<div class="line">  <span class="keywordflow">while</span> (!terminated) {</div>
+<div class="line">    usleep(100 * 1000);</div>
+<div class="line">  }</div>
 <div class="line">  <a class="code hl_function" href="group__sg__httpsrv.html#gac377679c831c0b428ee80b2f63174bf8">sg_httpsrv_free</a>(srv);</div>
 <div class="line">  <span class="keywordflow">return</span> EXIT_SUCCESS;</div>
 <div class="line">}</div>
@@ -164,7 +176,7 @@ var searchBox = new SearchBox("searchBox", "search/",'.html');
 </div><!-- fragment --> </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 10 2024 18:09:37 for Sagui library by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
+Generated on Wed Feb 14 2024 15:11:38 for Sagui library by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.7
 </small></address>
 </body>
 </html>
